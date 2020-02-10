@@ -1,11 +1,17 @@
 
 import 'package:flutter/material.dart';
-import 'package:test_project/second-page.dart';
 
-class Home extends StatelessWidget {
+class SecondPage extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
+      /*appBar: AppBar(
+        backgroundColor: Colors.grey[300],
+        leading: IconButton(
+        icon: Icon(Icons.arrow_back),
+        color: Colors.black,
+        )
+      ),*/
       backgroundColor: Colors.grey[300],
           body: Container(
             child: SingleChildScrollView(
@@ -20,7 +26,7 @@ class Home extends StatelessWidget {
 
               Center(
                   child: Text(
-                    'EasyInvest',
+                    'BadRuim',
                     textAlign: TextAlign.center,
                     style: TextStyle(
                         color: Colors.black,
@@ -36,7 +42,7 @@ class Home extends StatelessWidget {
         Container(
           child: Align(
             alignment: Alignment.center,
-            child: Text('Qual o nome da sua empresa?'),
+            child: Text('Qual o ramo da sua empresa?'),
           ),
         ),
 
@@ -56,7 +62,7 @@ class Home extends StatelessWidget {
                   keyboardType: TextInputType.emailAddress,
                   decoration: InputDecoration(
                     border: InputBorder.none,
-                    hintText: 'Ex: BadRuim',
+                    hintText: 'Ex: Tecnologia',
                     labelStyle: TextStyle(
                       fontFamily: "Quicksand",
                     ),
@@ -108,16 +114,10 @@ class Home extends StatelessWidget {
                 children: <Widget>[
                   Expanded(
                     child: GestureDetector(
-                      onTap: (){ Navigator.push(
-                                  context,
-                                  new MaterialPageRoute(
-                                      builder: (BuildContext context) =>
-                                          new SecondPage()));
+                      onTap: () {}),
                    
-                 },
-                   
-                 )
-                 )
+                 ),
+
 
                /*FlatButton(
                  hoverColor: Colors.amber,
