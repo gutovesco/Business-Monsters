@@ -1,5 +1,7 @@
 
 import 'package:flutter/material.dart';
+import 'package:provider/provider.dart';
+import 'package:test_project/blocs/theme.dart';
 import 'package:test_project/second-page.dart';
 
 class Home extends StatefulWidget {
@@ -11,11 +13,13 @@ class _Home extends State<Home>{
     final List<String> subjects = ["Básico", "Intermediário", 'Avançado'];
 
   String selectedSubject = "Básico";
-  @override
+
   @override
   Widget build(BuildContext context) {
+
+    ThemeChanger _themeChanger = Provider.of<ThemeChanger>(context);
+
     return Scaffold(
-      backgroundColor: Colors.grey[300],
           body: Container(
             child: SingleChildScrollView(
       child: Column(children: <Widget>[
@@ -26,16 +30,11 @@ class _Home extends State<Home>{
             mainAxisAlignment: MainAxisAlignment.center,
             children: <Widget>[
               Spacer(),
-
               Center(
-                  child: Text(
-                    'EasyInvest',
-                    textAlign: TextAlign.center,
-                    style: TextStyle(
-                        color: Colors.black,
-                        fontSize: 26,
-                        fontFamily: "Quicksand-Bold"),
-                  ),
+                  child: RaisedButton(
+                    color: Colors.purple,
+                    onPressed: () => (_themeChanger.setTheme(ThemeData.light())),
+                  )
               ),
             ],
           ),
