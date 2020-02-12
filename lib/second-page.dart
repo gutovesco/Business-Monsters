@@ -56,31 +56,42 @@ class SecondPage extends StatelessWidget {
                     borderRadius: BorderRadius.all(Radius.circular(50)),
                     color: Colors.white,
                     boxShadow: [
-                      BoxShadow(color: Colors.black12, blurRadius: 5)
-                    ]),
-                child: TextField(
-                  keyboardType: TextInputType.emailAddress,
-                  decoration: InputDecoration(
-                    border: InputBorder.none,
-                    hintText: 'Ex: Tecnologia',
-                    labelStyle: TextStyle(
-                      fontFamily: "Quicksand",
+                      BoxShadow(
+                       color: Colors.grey[600],
+                       offset: Offset(1.0,1.0),
+                       blurRadius: 10.0,
+                       spreadRadius: 1.0
+                     ),
+                     BoxShadow(
+                       color: Colors.white,
+                       offset: Offset(-4.0,-4.0),
+                       blurRadius: 15.0,
+                       spreadRadius: 1.0
+                     ),
+                    ]
+                    
                     ),
-                  ),
-                ),
+                child: DropdownButton<String>(
+                          items: <String>['Produtos Digitais', 'Comércio', 'C', 'D'].map((String value) {
+                          return new DropdownMenuItem<String>(
+                          value: value,
+                          child: new Text(value),
+                           );
+                          }).toList(),
+                          onChanged: (_) {},
+                  )
               ),
-
                Container(
                  width: 50,
                 height: 100,
                  decoration: BoxDecoration(
-                   color: Colors.grey[300],
+                   color: Colors.grey[400],
                    shape: BoxShape.circle,
                    boxShadow: [
                      BoxShadow(
                        color: Colors.grey[600],
                        offset: Offset(1.0,1.0),
-                       blurRadius: 10.0,
+                       blurRadius: 15.0,
                        spreadRadius: 1.0
                      ),
                      BoxShadow(
