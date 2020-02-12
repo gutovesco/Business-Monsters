@@ -2,7 +2,16 @@
 import 'package:flutter/material.dart';
 import 'package:test_project/second-page.dart';
 
-class Home extends StatelessWidget {
+class Home extends StatefulWidget {
+  @override
+  _Home createState() => _Home();
+}
+
+class _Home extends State<Home>{
+    final List<String> subjects = ["Básico", "Intermediário", 'Avançado'];
+
+  String selectedSubject = "Básico";
+  @override
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -36,38 +45,35 @@ class Home extends StatelessWidget {
         Container(
           child: Align(
             alignment: Alignment.center,
-            child: Text('Qual o nome da sua empresa?'),
+            child: Text('Em qual nível está a sua empresa?'),
           ),
         ),
-
-        Container(
-                width: MediaQuery.of(context).size.width / 1.2,
-                height: 45,
-                margin: EdgeInsets.only(top: 12),
-                padding:
-                    EdgeInsets.only(top: 4, left: 16, right: 16, bottom: 4),
-                decoration: BoxDecoration(
-                    borderRadius: BorderRadius.all(Radius.circular(50)),
-                    color: Colors.white,
-                    boxShadow: [
-                      BoxShadow(color: Colors.black12, blurRadius: 5)
-                    ]),
-                child: TextField(
-                  keyboardType: TextInputType.emailAddress,
-                  decoration: InputDecoration(
-                    border: InputBorder.none,
-                    hintText: 'Ex: BadRuim',
-                    labelStyle: TextStyle(
-                      fontFamily: "Quicksand",
-                    ),
-                  ),
-                ),
-              ),
+        SizedBox(height: 20),
+         DropdownButton<String>(
+              iconSize: 24,
+              elevation: 6,
+              style: TextStyle(color: Colors.black),
+              value: selectedSubject,
+              onChanged: (value){
+                setState(() {
+                  selectedSubject = value;
+                });
+              },
+              items: subjects.map<DropdownMenuItem<String>>((value){
+                return DropdownMenuItem(
+                  child: Text(value),
+                  value: value,
+                );
+              }).toList(),
+            ),
 
                Container(
                  width: 50,
                 height: 100,
                  decoration: BoxDecoration(
+                   image: new DecorationImage(
+          image: new NetworkImage("https://www.materialui.co/materialIcons/navigation/arrow_forward_grey_192x192.png", scale: 8)
+      ),
                    color: Colors.grey[300],
                    shape: BoxShape.circle,
                    boxShadow: [

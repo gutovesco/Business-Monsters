@@ -1,7 +1,16 @@
 
 import 'package:flutter/material.dart';
+import 'package:test_project/home.dart';
 
-class SecondPage extends StatelessWidget {
+class SecondPage extends StatefulWidget {
+  @override
+  _SecondPage createState() => _SecondPage();
+}
+
+class _SecondPage extends State<SecondPage>{
+    final List<String> subjects = ["Comércio", "Produtos Digitais"];
+
+  String selectedSubject = "Produtos Digitais";
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -46,45 +55,31 @@ class SecondPage extends StatelessWidget {
           ),
         ),
 
-        Container(
-                width: MediaQuery.of(context).size.width / 1.2,
-                height: 45,
-                margin: EdgeInsets.only(top: 12),
-                padding:
-                    EdgeInsets.only(top: 4, left: 16, right: 16, bottom: 4),
-                decoration: BoxDecoration(
-                    borderRadius: BorderRadius.all(Radius.circular(50)),
-                    color: Colors.white,
-                    boxShadow: [
-                      BoxShadow(
-                       color: Colors.grey[600],
-                       offset: Offset(1.0,1.0),
-                       blurRadius: 10.0,
-                       spreadRadius: 1.0
-                     ),
-                     BoxShadow(
-                       color: Colors.white,
-                       offset: Offset(-4.0,-4.0),
-                       blurRadius: 15.0,
-                       spreadRadius: 1.0
-                     ),
-                    ]
-                    
-                    ),
-                child: DropdownButton<String>(
-                          items: <String>['Produtos Digitais', 'Comércio', 'C', 'D'].map((String value) {
-                          return new DropdownMenuItem<String>(
-                          value: value,
-                          child: new Text(value),
-                           );
-                          }).toList(),
-                          onChanged: (_) {},
-                  )
-              ),
+        SizedBox(height: 20),
+                DropdownButton<String>(
+              iconSize: 24,
+              elevation: 6,
+              style: TextStyle(color: Colors.black),
+              value: selectedSubject,
+              onChanged: (value){
+                setState(() {
+                  selectedSubject = value;
+                });
+              },
+              items: subjects.map<DropdownMenuItem<String>>((value){
+                return DropdownMenuItem(
+                  child: Text(value),
+                  value: value,
+                );
+              }).toList(),
+            ),
                Container(
                  width: 50,
                 height: 100,
                  decoration: BoxDecoration(
+                   image: new DecorationImage(
+          image: new NetworkImage("https://www.materialui.co/materialIcons/navigation/arrow_forward_grey_192x192.png", scale: 8)
+      ),
                    color: Colors.grey[400],
                    shape: BoxShape.circle,
                    boxShadow: [
@@ -101,7 +96,6 @@ class SecondPage extends StatelessWidget {
                        spreadRadius: 1.0
                      ),
                    ],
-
                    gradient: LinearGradient(
                      begin: Alignment.topLeft,
                      end: Alignment.bottomRight,
@@ -128,6 +122,7 @@ class SecondPage extends StatelessWidget {
                       onTap: () {}),
                    
                  ),
+
 
 
                /*FlatButton(
