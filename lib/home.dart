@@ -138,4 +138,29 @@ class _Home extends State<Home>{
                           Navigator.pop(context);
                         })*/
 
+                                                /*
+Container(
+                 width: 40,
+                height: 40,
+                 decoration: BoxDecoration(
+                   boxShadow: [
+                      BoxShadow(
+        color: Colors.white.withOpacity(0.1),
+        offset: Offset(-4.0, -4.0),
+        blurRadius: 16.0,
+      ),
+      BoxShadow(
+        color: Colors.black.withOpacity(0.4),
+        offset: Offset(4.0, 4.0),
+        blurRadius: 16.0,
+      ),
+    ],
+    color: Color(0xFF292D32),
+    borderRadius: BorderRadius.circular(30.0),
+                 ),
+                        */
+
+
             ])))]))));}}
+                        //black button style
+
