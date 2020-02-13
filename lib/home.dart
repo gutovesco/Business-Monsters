@@ -33,7 +33,7 @@ class _Home extends State<Home>{
               Center(
                   child: RaisedButton(
                     color: Colors.purple,
-                    onPressed: () => (_themeChanger.setTheme(ThemeData.light())),
+                    onPressed: () => (_themeChanger.setTheme(ThemeData.dark())),
                   )
               ),
             ],
@@ -139,7 +139,7 @@ class _Home extends State<Home>{
                         })*/
 
                                                 /*
-Container(
+            Container(
                  width: 40,
                 height: 40,
                  decoration: BoxDecoration(

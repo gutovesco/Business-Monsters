@@ -1,6 +1,5 @@
-
+import 'package:test_project/login-screen.dart';
 import 'package:flutter/material.dart';
-import 'package:test_project/home.dart';
 
 class SecondPage extends StatefulWidget {
   @override
@@ -119,7 +118,12 @@ class _SecondPage extends State<SecondPage>{
                 children: <Widget>[
                   Expanded(
                     child: GestureDetector(
-                      onTap: () {}),
+                      onTap: (){ Navigator.push(
+                                  context,
+                                  new MaterialPageRoute(
+                                      builder: (BuildContext context) =>
+                                          new LoginScreen()));
+                      }
                    
                  ),
 
@@ -139,4 +143,4 @@ class _SecondPage extends State<SecondPage>{
                           Navigator.pop(context);
                         })*/
 
-            ])))]))));}}
+    )])))]))));}}

@@ -2,7 +2,7 @@
 import 'package:custom_switch/custom_switch.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
-import 'package:font_awesome_flutter/font_awesome_flutter.dart';
+import 'package:test_project/home.dart';
 import 'package:test_project/second-page.dart';
 
 class LoginScreen extends StatefulWidget {
@@ -17,7 +17,7 @@ class _LoginScreenState extends State<LoginScreen> {
   @override
   Widget build(BuildContext context) {
     ScreenUtil.init(context,
-        width: 1080, height: 2160, allowFontScaling: false);
+        width: 1080, height: 1860, allowFontScaling: false);
     return Scaffold(
         backgroundColor: Color(0xFFF1F3F6),
         body: SafeArea(
@@ -29,30 +29,20 @@ class _LoginScreenState extends State<LoginScreen> {
                   crossAxisAlignment: CrossAxisAlignment.start,
                   children: <Widget>[
                     SizedBox(
-                      height: ScreenUtil().setHeight(100),
+                      height: ScreenUtil().setHeight(200),
                     ),
-                    Text(
-                      "Login",
+                    Center(
+                    child: Text(
+                      "Business Monsters",
+                      textAlign: TextAlign.center,
                       style: TextStyle(
-                          color: Color(0xFF4D70A6),
+                          color: Color.fromRGBO(78, 165, 4, 100),
                           fontSize: 26,
                           fontWeight: FontWeight.bold),
                     ),
+                    ),
                     SizedBox(
                       height: ScreenUtil().setHeight(170),
-                    ),
-                    Row(
-                      children: <Widget>[
-                        Expanded(
-                          child: socialButton(FontAwesomeIcons.facebookF),
-                        ),
-                        SizedBox(
-                          width: ScreenUtil().setWidth(60),
-                        ),
-                        Expanded(
-                          child: socialButton(FontAwesomeIcons.google),
-                        )
-                      ],
                     ),
                     SizedBox(
                       height: ScreenUtil().setHeight(20),
@@ -60,15 +50,15 @@ class _LoginScreenState extends State<LoginScreen> {
                     Stack(
                       children: <Widget>[
                         TextField(
-                          style: TextStyle(color: Color(0xFF4D70A6)),
+                          style: TextStyle(color: Color.fromRGBO(78, 165, 4, 100)),
                           decoration: InputDecoration(
                               focusedBorder: UnderlineInputBorder(
                                 borderSide: BorderSide(
-                                    color: Color(0xFF4D70A6), width: 2),
+                                    color: Color.fromRGBO(78, 165, 4, 100), width: 2),
                               ),
                               labelText: "Username",
                               labelStyle: TextStyle(
-                                  color: Color(0xFF4D70A6), fontSize: 14)),
+                                  color: Color.fromRGBO(78, 165, 4, 100), fontSize: 14)),
                         ),
                         Positioned(
                           right: 1,
@@ -92,7 +82,7 @@ class _LoginScreenState extends State<LoginScreen> {
                                 ]),
                             child: Icon(
                               Icons.check,
-                              color: Color(0xFF4D70A6),
+                               color: Color.fromRGBO(78, 165, 4, 100),
                             ),
                           ),
                         ),
@@ -102,15 +92,15 @@ class _LoginScreenState extends State<LoginScreen> {
                       height: ScreenUtil().setHeight(100),
                     ),
                     TextField(
-                      style: TextStyle(color: Color(0xFF4D70A6)),
+                      style: TextStyle(color: Color.fromRGBO(78, 165, 4, 100)),
                       decoration: InputDecoration(
                           focusedBorder: UnderlineInputBorder(
                             borderSide:
-                                BorderSide(color: Color(0xFF4D70A6), width: 2),
+                                BorderSide(color: Color.fromRGBO(78, 165, 4, 100), width: 2),
                           ),
                           labelText: "Password",
                           labelStyle: TextStyle(
-                              color: Color(0xFF4D70A6), fontSize: 14)),
+                              color: Color.fromRGBO(78, 165, 4, 100), fontSize: 14)),
                     ),
                     SizedBox(
                       height: ScreenUtil().setHeight(70),
@@ -131,7 +121,7 @@ class _LoginScreenState extends State<LoginScreen> {
                           ]*/
                               ),
                           child: CustomSwitch(
-                            activeColor: Color(0xFFF1F3F6),
+                            activeColor: Color.fromRGBO(78, 165, 4, 100),
                             value: status,
                             onChanged: (value) {
                               setState(() {
@@ -145,13 +135,13 @@ class _LoginScreenState extends State<LoginScreen> {
                         ),
                         Text(
                           "Remember me",
-                          style: TextStyle(color: Colors.grey, fontSize: 14),
+                          style: TextStyle(color: Colors.grey[600], fontSize: 14),
                         ),
                         Spacer(),
                         Text(
                           "Forgot Password?",
                           style: TextStyle(
-                            color: Color(0xFF4D70A6),
+                            color: Color.fromRGBO(78, 165, 4, 100),
                             fontSize: 14,
                           ),
                         ),
@@ -165,7 +155,7 @@ class _LoginScreenState extends State<LoginScreen> {
                                   context,
                                   new MaterialPageRoute(
                                       builder: (BuildContext context) =>
-                                          new SecondPage()));
+                                          new Home()));
                       },
                       child: Container(
                         width: double.infinity,
@@ -188,7 +178,7 @@ class _LoginScreenState extends State<LoginScreen> {
                         child: Text(
                           "Login",
                           style:
-                              TextStyle(color: Color(0xFF4D70A6), fontSize: 16),
+                              TextStyle(color: Color.fromRGBO(78, 165, 4, 100), fontSize: 16),
                         ),
                       ),
                     ),
@@ -197,10 +187,10 @@ class _LoginScreenState extends State<LoginScreen> {
                         text: TextSpan(children: <TextSpan>[
                           TextSpan(
                               text: "Don't have an account?",
-                              style: TextStyle(color: Colors.grey)),
+                              style: TextStyle(color: Colors.grey[600])),
                           TextSpan(
                               text: " Sign Up",
-                              style: TextStyle(color: Color(0xFF4D70A6))),
+                              style: TextStyle(color: Color.fromRGBO(78, 165, 4, 100),)),
                         ]),
                       ),
                     )
@@ -208,29 +198,5 @@ class _LoginScreenState extends State<LoginScreen> {
                 )),
           ),
         ));
-  }
-
-  Widget socialButton(IconData icon) {
-    return Container(
-      height: ScreenUtil().setHeight(120),
-      margin: EdgeInsets.symmetric(vertical: 30),
-      decoration: BoxDecoration(
-          color: Color(0xFFF1F3F6),
-          borderRadius: BorderRadius.all(Radius.circular(10)),
-          boxShadow: [
-            BoxShadow(
-                offset: Offset(10, 10),
-                color: Color(0xFF4D70A6).withOpacity(0.2),
-                blurRadius: 16),
-            BoxShadow(
-                offset: Offset(-10, -10),
-                color: Color.fromARGB(170, 255, 255, 255),
-                blurRadius: 10),
-          ]),
-      child: Icon(
-        icon,
-        color: Color(0xFF4D70A6),
-      ),
-    );
   }
 }
