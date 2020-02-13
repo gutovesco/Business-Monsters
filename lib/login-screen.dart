@@ -1,4 +1,3 @@
-
 import 'package:custom_switch/custom_switch.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
@@ -14,6 +13,7 @@ class LoginScreen extends StatefulWidget {
 
 class _LoginScreenState extends State<LoginScreen> {
   bool status = true;
+
   @override
   Widget build(BuildContext context) {
     ScreenUtil.init(context,
@@ -32,14 +32,14 @@ class _LoginScreenState extends State<LoginScreen> {
                       height: ScreenUtil().setHeight(200),
                     ),
                     Center(
-                    child: Text(
-                      "Business Monsters",
-                      textAlign: TextAlign.center,
-                      style: TextStyle(
-                          color: Color.fromRGBO(78, 165, 4, 100),
-                          fontSize: 26,
-                          fontWeight: FontWeight.bold),
-                    ),
+                      child: Text(
+                        "Business Monsters",
+                        textAlign: TextAlign.center,
+                        style: TextStyle(
+                            color: Color.fromRGBO(78, 165, 4, 100),
+                            fontSize: 26,
+                            fontWeight: FontWeight.bold),
+                      ),
                     ),
                     SizedBox(
                       height: ScreenUtil().setHeight(170),
@@ -50,15 +50,18 @@ class _LoginScreenState extends State<LoginScreen> {
                     Stack(
                       children: <Widget>[
                         TextField(
-                          style: TextStyle(color: Color.fromRGBO(78, 165, 4, 100)),
+                          style:
+                              TextStyle(color: Color.fromRGBO(78, 165, 4, 100)),
                           decoration: InputDecoration(
                               focusedBorder: UnderlineInputBorder(
                                 borderSide: BorderSide(
-                                    color: Color.fromRGBO(78, 165, 4, 100), width: 2),
+                                    color: Color.fromRGBO(78, 165, 4, 100),
+                                    width: 2),
                               ),
                               labelText: "Username",
                               labelStyle: TextStyle(
-                                  color: Color.fromRGBO(78, 165, 4, 100), fontSize: 14)),
+                                  color: Color.fromRGBO(78, 165, 4, 100),
+                                  fontSize: 14)),
                         ),
                         Positioned(
                           right: 1,
@@ -82,7 +85,7 @@ class _LoginScreenState extends State<LoginScreen> {
                                 ]),
                             child: Icon(
                               Icons.check,
-                               color: Color.fromRGBO(78, 165, 4, 100),
+                              color: Color.fromRGBO(78, 165, 4, 100),
                             ),
                           ),
                         ),
@@ -95,12 +98,14 @@ class _LoginScreenState extends State<LoginScreen> {
                       style: TextStyle(color: Color.fromRGBO(78, 165, 4, 100)),
                       decoration: InputDecoration(
                           focusedBorder: UnderlineInputBorder(
-                            borderSide:
-                                BorderSide(color: Color.fromRGBO(78, 165, 4, 100), width: 2),
+                            borderSide: BorderSide(
+                                color: Color.fromRGBO(78, 165, 4, 100),
+                                width: 2),
                           ),
                           labelText: "Password",
                           labelStyle: TextStyle(
-                              color: Color.fromRGBO(78, 165, 4, 100), fontSize: 14)),
+                              color: Color.fromRGBO(78, 165, 4, 100),
+                              fontSize: 14)),
                     ),
                     SizedBox(
                       height: ScreenUtil().setHeight(70),
@@ -135,7 +140,8 @@ class _LoginScreenState extends State<LoginScreen> {
                         ),
                         Text(
                           "Remember me",
-                          style: TextStyle(color: Colors.grey[600], fontSize: 14),
+                          style:
+                              TextStyle(color: Colors.grey[600], fontSize: 14),
                         ),
                         Spacer(),
                         Text(
@@ -151,11 +157,11 @@ class _LoginScreenState extends State<LoginScreen> {
                       height: ScreenUtil().setHeight(130),
                     ),
                     GestureDetector(
-                      onTap: (){ Navigator.push(
-                                  context,
-                                  new MaterialPageRoute(
-                                      builder: (BuildContext context) =>
-                                          new Home()));
+                      onTap: () {
+                        Navigator.push(
+                            context,
+                            new MaterialPageRoute(
+                                builder: (BuildContext context) => new Home()));
                       },
                       child: Container(
                         width: double.infinity,
@@ -177,8 +183,9 @@ class _LoginScreenState extends State<LoginScreen> {
                             ]),
                         child: Text(
                           "Login",
-                          style:
-                              TextStyle(color: Color.fromRGBO(78, 165, 4, 100), fontSize: 16),
+                          style: TextStyle(
+                              color: Color.fromRGBO(78, 165, 4, 100),
+                              fontSize: 16),
                         ),
                       ),
                     ),
@@ -190,7 +197,9 @@ class _LoginScreenState extends State<LoginScreen> {
                               style: TextStyle(color: Colors.grey[600])),
                           TextSpan(
                               text: " Sign Up",
-                              style: TextStyle(color: Color.fromRGBO(78, 165, 4, 100),)),
+                              style: TextStyle(
+                                color: Color.fromRGBO(78, 165, 4, 100),
+                              )),
                         ]),
                       ),
                     )

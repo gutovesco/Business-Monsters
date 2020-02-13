@@ -12,6 +12,7 @@ class CardsScreen extends StatefulWidget {
 
 class _CardsScreenState extends State<CardsScreen> {
   bool status = true;
+
   @override
   Widget build(BuildContext context) {
     ScreenUtil.init(context,

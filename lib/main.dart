@@ -3,8 +3,7 @@ import 'package:provider/provider.dart';
 import 'package:test_project/blocs/theme.dart';
 import 'package:test_project/login-screen.dart';
 
-void main() 
-{
+void main() {
   runApp(MyApp());
 }
 
