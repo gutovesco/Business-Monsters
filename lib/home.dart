@@ -31,7 +31,7 @@ class _Home extends State<Home> {
             Center(
                 child: RaisedButton(
               color: Colors.purple,
-              onPressed: () => (_themeChanger.setTheme(ThemeData.dark())),
+              onPressed: () => (_themeChanger.setTheme(ThemeData.light())),
             )),
           ],
         ),

@@ -2,7 +2,8 @@ import 'package:custom_switch/custom_switch.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:test_project/home.dart';
-import 'package:test_project/second-page.dart';
+import 'package:test_project/user-signup.dart';
+
 
 class LoginScreen extends StatefulWidget {
   LoginScreen({Key key}) : super(key: key);
@@ -189,20 +190,40 @@ class _LoginScreenState extends State<LoginScreen> {
                         ),
                       ),
                     ),
-                    Center(
-                      child: RichText(
-                        text: TextSpan(children: <TextSpan>[
-                          TextSpan(
-                              text: "Don't have an account?",
-                              style: TextStyle(color: Colors.grey[600])),
-                          TextSpan(
-                              text: " Sign Up",
-                              style: TextStyle(
-                                color: Color.fromRGBO(78, 165, 4, 100),
-                              )),
-                        ]),
+                    
+                     GestureDetector(
+                      onTap: () {
+                        Navigator.push(
+                            context,
+                            new MaterialPageRoute(
+                                builder: (BuildContext context) => new MyTabs()));
+                      },
+                      child: Container(
+                        width: double.infinity,
+                        alignment: Alignment.center,
+                        height: ScreenUtil().setHeight(120),
+                        margin: EdgeInsets.symmetric(vertical: 15),
+                        decoration: BoxDecoration(
+                            color: Color(0xFFF1F3F6),
+                            borderRadius: BorderRadius.all(Radius.circular(10)),
+                            boxShadow: [
+                              BoxShadow(
+                                  offset: Offset(10, 10),
+                                  color: Color(0xFF4D70A6).withOpacity(0.2),
+                                  blurRadius: 16),
+                              BoxShadow(
+                                  offset: Offset(-10, -10),
+                                  color: Color.fromARGB(170, 255, 255, 255),
+                                  blurRadius: 10),
+                            ]),
+                        child: Text(
+                          "Sign Up",
+                          style: TextStyle(
+                              color: Color.fromRGBO(78, 165, 4, 100),
+                              fontSize: 16),
+                        ),
                       ),
-                    )
+                    ),
                   ],
                 )),
           ),
