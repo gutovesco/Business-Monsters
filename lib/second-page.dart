@@ -9,7 +9,7 @@ class SecondPage extends StatefulWidget {
 class _SecondPage extends State<SecondPage> {
   final List<String> subjects = ["Comércio", "Produtos Digitais"];
 
-  String selectedSubject = "Produtos Digitais";
+  String selectedSubject = "Digital Products";
 
   @override
   Widget build(BuildContext context) {
