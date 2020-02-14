@@ -1,21 +1,12 @@
 import 'package:flutter/material.dart';
 import 'package:slimy_card/slimy_card.dart';
-import 'package:flutter_screenutil/flutter_screenutil.dart';
-import 'package:test_project/business-information.dart';
 
 
-class SlimyCardPage extends StatefulWidget {
+class SlimyCardPage2 extends StatefulWidget {
   @override
-  _SlimyCardPage createState() => _SlimyCardPage();
+  _SlimyCardPage2 createState() => _SlimyCardPage2();
 }
-class _SlimyCardPage extends State<SlimyCardPage> {
-
-  final List<String> estudo = ["Ensino Fundamental"];
-  String selectedestudo = "Ensino Fundamental";
-
-  final List<String> area = ["Finanças", "Comercial", 'Tecnologia'];
-  String selectedarea = "Tecnologia";
-
+class _SlimyCardPage2 extends State<SlimyCardPage2> {
   Widget build(BuildContext context) {
     return Scaffold(
       backgroundColor: Color(0xFFF1F3F6),
@@ -32,8 +23,8 @@ class _SlimyCardPage extends State<SlimyCardPage> {
                   bottomCardHeight: 420,
                   width: 400,
                   topCardWidget: topCardWidget((snapshot.data)
-                      ? 'Informações Pessoais'
-                      : 'Informações Pessoais'),
+                      ? 'Informações do Negócio'
+                      : 'Informações do Negócio'),
                   bottomCardWidget: bottomCardWidget(),
                 )
               ]);
@@ -71,7 +62,7 @@ class _SlimyCardPage extends State<SlimyCardPage> {
                                 color: Colors.white,
                                 width: 2),
                           ),
-                          labelText: "Nome",
+                          labelText: "Nome da Empresa/Projeto",
                           labelStyle: TextStyle(
                               color: Colors.white,
                               fontSize: 16,
@@ -86,7 +77,7 @@ class _SlimyCardPage extends State<SlimyCardPage> {
                                 color: Colors.white,
                                 width: 2),
                           ),
-                          labelText: "E-mail",
+                          labelText: "CNPJ",
                           labelStyle: TextStyle(
                               color: Colors.white,
                               fontSize: 16,
@@ -101,83 +92,12 @@ class _SlimyCardPage extends State<SlimyCardPage> {
                                 color: Colors.white,
                                 width: 2),
                           ),
-                          labelText: "Senha",
+                          labelText: "Site",
                           labelStyle: TextStyle(
                               color: Colors.white,
                               fontSize: 16,
                     ),
                   )
                 ),
-
-       DropdownButton<String>(
-        iconSize: 24,
-        elevation: 6,
-        style: TextStyle(color: Colors.white),
-        value: selectedestudo,
-        onChanged: (value) {
-          setState(() {
-            selectedestudo = value;
-          });
-        },
-        items: estudo.map<DropdownMenuItem<String>>((value) {
-          return DropdownMenuItem(
-            child: Text(value),
-            value: value,
-          );
-        }).toList(),
-      ),
-
-       DropdownButton<String>(
-        iconSize: 24,
-        elevation: 6,
-        style: TextStyle(color: Colors.white),
-        value: selectedarea,
-        onChanged: (value) {
-          setState(() {
-            selectedarea = value;
-          });
-        },
-        items: area.map<DropdownMenuItem<String>>((value) {
-          return DropdownMenuItem(
-            child: Text(value),
-            value: value,
-          );
-        }).toList(),
-      ),
-
-      SizedBox(height: 40),
-      GestureDetector(
-                     onTap: () {
-                        Navigator.push(
-                            context,
-                            new MaterialPageRoute(
-                                builder: (BuildContext context) => SlimyCardPage2()));
-                      },
-                      child: Container(
-                        width: double.infinity,
-                        alignment: Alignment.center,
-                        height: ScreenUtil().setHeight(120),
-                        margin: EdgeInsets.symmetric(vertical: 15),
-                        decoration: BoxDecoration(
-                            color: Color(0xFFF1F3F6),
-                            borderRadius: BorderRadius.all(Radius.circular(10)),
-                            boxShadow: [
-                              BoxShadow(
-                                  offset: Offset(10, 10),
-                                  color: Color(0xFF4D70A6).withOpacity(0),
-                                  blurRadius: 16),
-                              BoxShadow(
-                                  offset: Offset(-10, -10),
-                                  color: Color.fromARGB(170, 255, 255, 255).withOpacity(0),
-                                  blurRadius: 10),
-                            ]),
-                        child: Text(
-                          "Próximo",
-                          style: TextStyle(
-                              color: Color.fromRGBO(78, 165, 4, 100),
-                              fontSize: 16),
-                        ),
-                      ),
-                    ),
 
                     ])))));}}
