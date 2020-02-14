@@ -2,6 +2,7 @@ import 'package:custom_switch/custom_switch.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:test_project/home.dart';
+import 'package:test_project/test.dart';
 import 'package:test_project/user-signup.dart';
 
 
@@ -196,7 +197,7 @@ class _LoginScreenState extends State<LoginScreen> {
                         Navigator.push(
                             context,
                             new MaterialPageRoute(
-                                builder: (BuildContext context) => new MyTabs()));
+                                builder: (BuildContext context) => new First()));
                       },
                       child: Container(
                         width: double.infinity,

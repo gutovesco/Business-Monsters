@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
-import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:slimy_card/slimy_card.dart';
+import 'package:flutter_screenutil/flutter_screenutil.dart';
+
 
 class First extends StatefulWidget {
   @override
@@ -14,77 +15,103 @@ class _First extends State<First> {
   final List<String> conhecimento = ["Finanças", "Comercial", 'Tecnologia'];
   String selectedconhecimento = "Tecnologia";
 
-  @override
-  Widget build(BuildContext context) { 
-    ScreenUtil.init(context,
-        width: 1080, height: 1860, allowFontScaling: false);
-  return Scaffold(
-        backgroundColor: Color(0xFFF1F3F6),
-        body: SafeArea(
+  Widget build(BuildContext context) {
+    return Scaffold(
+      backgroundColor: Color(0xFFF1F3F6),
+        body: StreamBuilder(
+            // This streamBuilder reads the real-time status of SlimyCard.
+            initialData: false,
+            stream: slimyCard.stream, //Stream of SlimyCard
+            builder: ((BuildContext context, AsyncSnapshot snapshot) {
+              return ListView(padding: EdgeInsets.zero, children: <Widget>[
+                SlimyCard(
+                  slimeEnabled: false,
+                  color: const Color(0xff0ffa61),
+                  topCardHeight: 199,
+                  bottomCardHeight: 450,
+                  width: 400,
+                  topCardWidget: topCardWidget((snapshot.data)
+                      ? 'Informações Pessoais'
+                      : 'Informações Pessoais'),
+                  bottomCardWidget: bottomCardWidget(),
+                )
+              ]);
+            })));
+  }
+  // This widget will be passed as Top Card's Widget.
+  Widget topCardWidget(String data) {
+    return Column(
+        mainAxisAlignment: MainAxisAlignment.center,
+        children: <Widget>[
+          Container(
+              child: Text(data,
+                  style: TextStyle(
+                      color: Colors.white,
+                      fontSize: 20,
+                      fontWeight: FontWeight.bold))),
+        ]);
+  }
+  // This widget will be passed as Bottom Card's Widget.
+  Widget bottomCardWidget() {
+    return Scaffold(
+      backgroundColor: Color(0xff0ffa61),
+      body: SafeArea(
           child: SingleChildScrollView(
             child: Container(
-                margin: EdgeInsets.symmetric(
-                    horizontal: ScreenUtil().setWidth(120)),
+              color:Color(0xff0ffa61),
                 child: Column(
                   crossAxisAlignment: CrossAxisAlignment.start,
                   children: <Widget>[
-                    SizedBox(
-                      height: ScreenUtil().setHeight(27),
-                    ),
-                    SizedBox(
-                      height: ScreenUtil().setHeight(20),
-                    ),
-                  
-                    SizedBox(
-                      height: ScreenUtil().setHeight(07),
-                    ),
                     TextField(
-                      style: TextStyle(color: Color.fromRGBO(78, 165, 4, 100)),
+                      style: TextStyle(color: Colors.white),
                       decoration: InputDecoration(
                           focusedBorder: UnderlineInputBorder(
                             borderSide: BorderSide(
-                                color: Color.fromRGBO(78, 165, 4, 100),
+                                color: Colors.white,
+                                width: 2),
+                          ),
+                          labelText: "Nome",
+                          labelStyle: TextStyle(
+                              color: Colors.white,
+                              fontSize: 16,
+                    ),
+                  ),
+                ),
+                    TextField(
+                      style: TextStyle(color: Colors.white),
+                      decoration: InputDecoration(
+                          focusedBorder: UnderlineInputBorder(
+                            borderSide: BorderSide(
+                                color: Colors.white,
                                 width: 2),
                           ),
                           labelText: "E-mail",
                           labelStyle: TextStyle(
-                              color: Color.fromRGBO(78, 165, 4, 100),
-                              fontSize: 16)),
+                              color: Colors.white,
+                              fontSize: 16,
                     ),
-
-                          TextField(
-                      style: TextStyle(color: Color.fromRGBO(78, 165, 4, 100)),
+                  )
+                ),
+                TextField(
+                      style: TextStyle(color: Colors.white),
                       decoration: InputDecoration(
                           focusedBorder: UnderlineInputBorder(
                             borderSide: BorderSide(
-                                color: Color.fromRGBO(78, 165, 4, 100),
+                                color: Colors.white,
                                 width: 2),
                           ),
                           labelText: "Senha",
                           labelStyle: TextStyle(
-                              color: Color.fromRGBO(78, 165, 4, 100),
-                              fontSize: 16)),
+                              color: Colors.white,
+                              fontSize: 16,
                     ),
+                  )
+                ),
 
-                                        TextField(
-                      style: TextStyle(color: Color.fromRGBO(78, 165, 4, 100)),
-                      decoration: InputDecoration(
-                          focusedBorder: UnderlineInputBorder(
-                            borderSide: BorderSide(
-                                color: Color.fromRGBO(78, 165, 4, 100),
-                                width: 2),
-                          ),
-                          labelText: "Confirme a senha",
-                          labelStyle: TextStyle(
-                              color: Color.fromRGBO(78, 165, 4, 100),
-                              fontSize: 16)),
-                    ),
-
-
-       DropdownButton<String>(
+                DropdownButton<String>(
         iconSize: 24,
         elevation: 6,
-        style: TextStyle(color: Color.fromRGBO(78, 165, 4, 100)),
+        style: TextStyle(color: Colors.white),
         value: selectedgrade,
         onChanged: (value) {
           setState(() {
@@ -102,7 +129,7 @@ class _First extends State<First> {
        DropdownButton<String>(
         iconSize: 24,
         elevation: 6,
-        style: TextStyle(color: Color.fromRGBO(78, 165, 4, 100)),
+        style: TextStyle(color: Colors.white),
         value: selectedconhecimento,
         onChanged: (value) {
           setState(() {
