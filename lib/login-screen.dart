@@ -83,10 +83,6 @@ class _LoginScreenState extends State<LoginScreen> {
                                       color: Color.fromARGB(170, 255, 255, 255),
                                       blurRadius: 10),
                                 ]),
-                            child: Icon(
-                              Icons.check,
-                              color: Color.fromRGBO(78, 165, 4, 100),
-                            ),
                           ),
                         ),
                       ],
@@ -195,7 +191,7 @@ class _LoginScreenState extends State<LoginScreen> {
                         Navigator.push(
                             context,
                             new MaterialPageRoute(
-                                builder: (BuildContext context) => new SlimyCardPage()));
+                                builder: (BuildContext context) => new SlimyCardPage2()));
                       },
                       child: Container(
                         width: double.infinity,

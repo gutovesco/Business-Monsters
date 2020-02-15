@@ -1,19 +1,17 @@
 import 'package:flutter/material.dart';
-import 'package:slimy_card/slimy_card.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
-import 'package:test_project/business-information.dart';
+import 'package:slimy_card/slimy_card.dart';
+import 'package:test_project/signup-complete.dart';
 
 
-class SlimyCardPage extends StatefulWidget {
+class SlimyCardPage2 extends StatefulWidget {
   @override
-  _SlimyCardPage createState() => _SlimyCardPage();
+  _SlimyCardPage2 createState() => _SlimyCardPage2();
 }
-class _SlimyCardPage extends State<SlimyCardPage> {
 
-  final List<String> estudo = ["Ensino Fundamental"];
-  String selectedestudo = "Ensino Fundamental";
+class _SlimyCardPage2 extends State<SlimyCardPage2> {
 
-  final List<String> area = ["Finanças", "Comercial", 'Tecnologia'];
+    final List<String> area = ["Finanças", "Comercial", 'Tecnologia'];
   String selectedarea = "Tecnologia";
 
   Widget build(BuildContext context) {
@@ -32,8 +30,8 @@ class _SlimyCardPage extends State<SlimyCardPage> {
                   bottomCardHeight: 420,
                   width: 400,
                   topCardWidget: topCardWidget((snapshot.data)
-                      ? 'Informações Pessoais'
-                      : 'Informações Pessoais'),
+                      ? 'Informações da Conta'
+                      : 'Informações da Conta'),
                   bottomCardWidget: bottomCardWidget(),
                 )
               ]);
@@ -71,14 +69,14 @@ class _SlimyCardPage extends State<SlimyCardPage> {
                                 color: Colors.white,
                                 width: 2),
                           ),
-                          labelText: "Nome",
+                          labelText: "Usuário",
                           labelStyle: TextStyle(
                               color: Colors.white,
                               fontSize: 16,
                     ),
                   ),
                 ),
-                    TextField(
+                TextField(
                       style: TextStyle(color: Colors.white),
                       decoration: InputDecoration(
                           focusedBorder: UnderlineInputBorder(
@@ -93,7 +91,7 @@ class _SlimyCardPage extends State<SlimyCardPage> {
                     ),
                   )
                 ),
-                TextField(
+                    TextField(
                       style: TextStyle(color: Colors.white),
                       decoration: InputDecoration(
                           focusedBorder: UnderlineInputBorder(
@@ -108,29 +106,26 @@ class _SlimyCardPage extends State<SlimyCardPage> {
                     ),
                   )
                 ),
-
-       DropdownButton<String>(
+                TextField(
+                      style: TextStyle(color: Colors.white),
+                      decoration: InputDecoration(
+                          focusedBorder: UnderlineInputBorder(
+                            borderSide: BorderSide(
+                                color: Colors.white,
+                                width: 2),
+                          ),
+                          labelText: "Confirmar Senha",
+                          labelStyle: TextStyle(
+                              color: Colors.white,
+                              fontSize: 16,
+                    ),
+                  )
+                ),
+                SizedBox(height: 10),
+                DropdownButton<String>(
         iconSize: 24,
         elevation: 6,
-        style: TextStyle(color: Colors.white),
-        value: selectedestudo,
-        onChanged: (value) {
-          setState(() {
-            selectedestudo = value;
-          });
-        },
-        items: estudo.map<DropdownMenuItem<String>>((value) {
-          return DropdownMenuItem(
-            child: Text(value),
-            value: value,
-          );
-        }).toList(),
-      ),
-
-       DropdownButton<String>(
-        iconSize: 24,
-        elevation: 6,
-        style: TextStyle(color: Colors.white),
+        style: TextStyle(color: Colors.white, fontSize: 16),
         value: selectedarea,
         onChanged: (value) {
           setState(() {
@@ -144,14 +139,14 @@ class _SlimyCardPage extends State<SlimyCardPage> {
           );
         }).toList(),
       ),
-
-      SizedBox(height: 40),
+                
+                 SizedBox(height: 20),
       GestureDetector(
                      onTap: () {
                         Navigator.push(
                             context,
                             new MaterialPageRoute(
-                                builder: (BuildContext context) => SlimyCardPage2()));
+                                builder: (BuildContext context) => SignupComplete()));
                       },
                       child: Container(
                         width: double.infinity,
@@ -172,7 +167,7 @@ class _SlimyCardPage extends State<SlimyCardPage> {
                                   blurRadius: 10),
                             ]),
                         child: Text(
-                          "Próximo",
+                          "Submeter",
                           style: TextStyle(
                               color: Color.fromRGBO(78, 165, 4, 100),
                               fontSize: 16),
