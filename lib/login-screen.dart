@@ -1,8 +1,8 @@
 import 'package:custom_switch/custom_switch.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
-import 'package:test_project/home.dart';
-import 'package:test_project/test.dart';
+import 'package:Business_Monsters/home.dart';
+import 'package:Business_Monsters/register_pages/test.dart';
 
 class LoginScreen extends StatefulWidget {
   LoginScreen({Key key}) : super(key: key);

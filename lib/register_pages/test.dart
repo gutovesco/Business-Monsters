@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:slimy_card/slimy_card.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
-import 'package:test_project/business-information.dart';
+import 'package:Business_Monsters/register_pages/business-information.dart';
 
 
 class SlimyCardPage extends StatefulWidget {

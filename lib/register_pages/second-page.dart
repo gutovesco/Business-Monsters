@@ -1,4 +1,4 @@
-import 'package:test_project/login-screen.dart';
+import 'package:Business_Monsters/login-screen.dart';
 import 'package:flutter/material.dart';
 
 class SecondPage extends StatefulWidget {
@@ -7,7 +7,7 @@ class SecondPage extends StatefulWidget {
 }
 
 class _SecondPage extends State<SecondPage> {
-  final List<String> subjects = ["Comércio", "Produtos Digitais"];
+  final List<String> subjects = ["Comércio", "Digital Products"];
 
   String selectedSubject = "Digital Products";
 
