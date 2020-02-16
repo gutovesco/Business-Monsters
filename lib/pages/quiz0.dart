@@ -1,7 +1,12 @@
-import 'package:Business_Monsters/pages/home_page.dart';
+import 'package:Business_Monsters/home.dart';
+import 'package:Business_Monsters/pages/congratulation.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 
+Color palleteBlue = Color(0xff010a43);
+Color palleteLightPink = Color(0xffffc2c2);
+Color palleteMediumPink = Color(0xffff9d9d);
+Color palletePink = Color(0xffff2e63);
 
 var finalScore = 0;
 var questionNumber = 0;
@@ -18,20 +23,20 @@ class AnimalQuiz{
     "Retorno do investimento + custo do investimento"],
 
     ["É um plano que foi desenvolvido visando a dominação do mundo", "É um plano que descreve os passos a seguir para fechar o negócio", 
-    "É um documento que descreve os objetivos de um negócio e quais os passos que devem ser dados pelo empreendedor", 
+    "Documento que descreve os objetivos de um negócio e os passos que devem ser dados pelo empreendedor", 
     "É um plano específico que deve ser seguido por todas as empresas que desejam ter sucesso"],
 
-    ["São pessoas que não trabalham e ganham muito dinheiro às custas das outras pessoas", 
-    "São pessoas que começaram a trabalhar desde de muito cedo, com poucas condições e acabaram criando grandes empresas", 
-    "São pessoas que começaram a trabalhar desde de muito tarde, com poucas condições e acabaram criando grandes empresas fracassadas", 
-    "São pessoas que nunca trabalharam mas tiveram sorte e obtiveram muito sucesso no seu primeiro emprego"]
+    ["Pessoas que não trabalham e ganham muito dinheiro às custas das outras pessoas", 
+    "Pessoas que começaram a trabalhar cedo e acabaram criando grandes empresas", 
+    "Pessoas que começaram a trabalhar desde de muito tarde, com poucas condições e acabaram criando grandes empresas fracassadas", 
+    "Pessoas que nunca trabalharam mas tiveram sorte e obtiveram muito sucesso no seu primeiro emprego"]
   ];
 
   var correctAnswers = [
     "Máximo venda de produto", 
     "(Retorno do investimento - custo do investimento)/custo do investimento", 
-    "É um documento que descreve os objetivos de um negócio e quais os passos que devem ser dados pelo empreendedor",
-    "São pessoas que começaram a trabalhar desde de muito cedo, com poucas condições e acabaram criando grandes empresas"
+    "Documento que descreve os objetivos de um negócio e os passos que devem ser dados pelo empreendedor",
+    "Pessoas que começaram a trabalhar cedo e acabaram criando grandes empresas"
   ];
 
   var questions = [
@@ -81,7 +86,7 @@ class Quiz1State extends State<Quiz1> {
             child: new Column(
               children: <Widget>[
                        SizedBox(
-                      height: ScreenUtil().setHeight(110),
+                      height: ScreenUtil().setHeight(40),
                     ),
                 new Padding(padding: EdgeInsets.all(20.0)),
 
@@ -91,30 +96,29 @@ class Quiz1State extends State<Quiz1> {
                       child: new Text("Missão 1 - Teste de Nivelamento",
                       textAlign: TextAlign.center,
                         style: new TextStyle(
+                          color: palleteBlue,
                             fontSize: 22.0
                         ),),
                   ),
                 ),
                 
-                SizedBox( height: 30),
+                SizedBox( height: 10),
                 Center(
                 child: new Text(quiz.questions[questionNumber],
                 textAlign: TextAlign.center,
                   style: new TextStyle(
+                    color: palleteBlue,
                     fontSize: 20.0,
                   ),),),
 
-                new Padding(padding: EdgeInsets.all(10.0)),
-                SizedBox(height: 30),
+                SizedBox(height: 20),
                 new Column(
                   mainAxisAlignment: MainAxisAlignment.spaceEvenly,
                   children: <Widget>[
                     //button 1
-                    new MaterialButton(
-                      minWidth: 120.0,
-                      color: Colors.blueGrey,
-                      onPressed: (){
-                        if(quiz.choices[questionNumber][0] == quiz.correctAnswers[questionNumber]){
+                    GestureDetector(
+                      onTap: () {
+                         if(quiz.choices[questionNumber][0] == quiz.correctAnswers[questionNumber]){
                           debugPrint("Correct");
                           finalScore++;
                         }else{
@@ -122,24 +126,29 @@ class Quiz1State extends State<Quiz1> {
                         }
                         updateQuestion();
                       },
-                      child: new Text(
-                        quiz.choices[questionNumber][0],
-                        textAlign: TextAlign.center,
-                        style: new TextStyle(
-                            fontSize: 20.0,
-                            color: Colors.white
-                        ),),
+                      child: Container(
+                        padding: EdgeInsets.fromLTRB(0, 20, 0, 0 ),
+                        width: 350,
+                        height: 80,
+                        decoration: BoxDecoration(
+                          borderRadius: BorderRadius.all(Radius.circular(10)),
+                          color: palletePink,
+                        ),
+                        child: Text(
+                          quiz.choices[questionNumber][0],
+                          textAlign: TextAlign.center,
+                          style: TextStyle(
+                              color: Colors.white,
+                              fontSize: 17.5),
+                        ),
+                      )
                     ),
-
                     SizedBox(height: 10),
 
                     //button 2
-                    new MaterialButton(
-                      minWidth: 120.0,
-                      color: Colors.blueGrey,
-                      onPressed: (){
-
-                        if(quiz.choices[questionNumber][1] == quiz.correctAnswers[questionNumber]){
+                   GestureDetector(
+                      onTap: () {
+                         if(quiz.choices[questionNumber][1] == quiz.correctAnswers[questionNumber]){
                           debugPrint("Correct");
                           finalScore++;
                         }else{
@@ -147,12 +156,22 @@ class Quiz1State extends State<Quiz1> {
                         }
                         updateQuestion();
                       },
-                      child: new Text(quiz.choices[questionNumber][1],
-                      textAlign: TextAlign.center,
-                        style: new TextStyle(
-                            fontSize: 20.0,
-                            color: Colors.white
-                        ),),
+                      child: Container(
+                        padding: EdgeInsets.fromLTRB(0, 20, 0, 0 ),
+                        width: 350,
+                        height: 80,
+                        decoration: BoxDecoration(
+                          borderRadius: BorderRadius.all(Radius.circular(10)),
+                          color: palletePink,
+                        ),
+                        child: Text(
+                          quiz.choices[questionNumber][1],
+                          textAlign: TextAlign.center,
+                          style: TextStyle(
+                              color: Colors.white,
+                              fontSize: 16),
+                        ),
+                      )
                     ),
                   ],
                 ),
@@ -164,12 +183,9 @@ class Quiz1State extends State<Quiz1> {
                   children: <Widget>[
 
                     //button 3
-                    new MaterialButton(
-                      minWidth: 120.0,
-                      color: Colors.blueGrey,
-                      onPressed: (){
-
-                        if(quiz.choices[questionNumber][2] == quiz.correctAnswers[questionNumber]){
+                   GestureDetector(
+                      onTap: () {
+                         if(quiz.choices[questionNumber][2] == quiz.correctAnswers[questionNumber]){
                           debugPrint("Correct");
                           finalScore++;
                         }else{
@@ -177,23 +193,30 @@ class Quiz1State extends State<Quiz1> {
                         }
                         updateQuestion();
                       },
-                      child: new Text(quiz.choices[questionNumber][2],
-                      textAlign: TextAlign.center,
-                        style: new TextStyle(
-                            fontSize: 20.0,
-                            color: Colors.white
-                        ),),
+                      child: Container(
+                        padding: EdgeInsets.fromLTRB(0, 20, 0, 0 ),
+                        width: 350,
+                        height: 100,
+                        decoration: BoxDecoration(
+                          borderRadius: BorderRadius.all(Radius.circular(10)),
+                          color: palletePink,
+                        ),
+                        child: Text(
+                          quiz.choices[questionNumber][2],
+                          textAlign: TextAlign.center,
+                          style: TextStyle(
+                              color: Colors.white,
+                              fontSize: 16),
+                        ),
+                      )
                     ),
 
                     SizedBox(height: 10),
 
                     //button 4
-                    new MaterialButton(
-                      minWidth: 120.0,
-                      color: Colors.blueGrey,
-                      onPressed: (){
-
-                        if(quiz.choices[questionNumber][3] == quiz.correctAnswers[questionNumber]){
+                    GestureDetector(
+                      onTap: () {
+                         if(quiz.choices[questionNumber][3] == quiz.correctAnswers[questionNumber]){
                           debugPrint("Correct");
                           finalScore++;
                         }else{
@@ -201,33 +224,53 @@ class Quiz1State extends State<Quiz1> {
                         }
                         updateQuestion();
                       },
-                      child: new Text(quiz.choices[questionNumber][3],
-                      textAlign: TextAlign.center,
-                        style: new TextStyle(
-                            fontSize: 20.0,
-                            color: Colors.white
-                        ),),
+                      child: Container(
+                        padding: EdgeInsets.fromLTRB(0, 20, 0, 0 ),
+                        width: 350,
+                        height: 90,
+                        decoration: BoxDecoration(
+                          borderRadius: BorderRadius.all(Radius.circular(10)),
+                          color: palletePink,
+                        ),
+                        child: Text(
+                          quiz.choices[questionNumber][3],
+                          textAlign: TextAlign.center,
+                          style: TextStyle(
+                              color: Colors.white,
+                              fontSize: 16),
+                        ),
+                      )
                     ),
 
                   ],
                 ),
 
-                new Padding(padding: EdgeInsets.all(15.0)),
-
-                new Container(
-                  alignment: Alignment.bottomCenter,
-                  child:  new MaterialButton(
-                      minWidth: 240.0,
-                      height: 30.0,
-                      color: Colors.red,
-                      onPressed: resetQuiz,
-                      child: new Text("Sair",
-                        style: new TextStyle(
-                            fontSize: 18.0,
-                            color: Colors.white
-                        ),)
-                  )
-                ),
+                SizedBox(height: 20),
+                GestureDetector(
+                     onTap: () {
+                        Navigator.push(
+                            context,
+                            new MaterialPageRoute(
+                                builder: (BuildContext context) => Home()));
+                      },
+                      child: Container(
+                        width: double.infinity,
+                        alignment: Alignment.center,
+                        height: ScreenUtil().setHeight(120),
+                        margin: EdgeInsets.symmetric(vertical: 15),
+                        decoration: BoxDecoration(
+                            color: Color(0xFFF1F3F6),
+                            borderRadius: BorderRadius.all(Radius.circular(10)),
+                             gradient: LinearGradient(
+            colors: [palletePink, palleteMediumPink]),),
+                        child: Text(
+                          "Submeter",
+                          style: TextStyle(
+                              color: Colors.white,
+                              fontSize: 16),
+                        ),
+                      ),
+                    ),
               ],
             ),
           ),
@@ -248,32 +291,43 @@ class Summary extends StatelessWidget{
     return new WillPopScope(
       onWillPop: () async => false,
       child: Scaffold(
-
         body: new Container(
+         margin: EdgeInsets.symmetric(
+           horizontal: ScreenUtil().setWidth(120)),
           child: new Column(
             mainAxisAlignment: MainAxisAlignment.center,
             children: <Widget>[
-              new Text("Pontuação Final: $score",
-              textAlign: TextAlign.center,
+              new Text("Você acertou: $score",
                 style: new TextStyle(
                     fontSize: 35.0
                 ),),
 
-              new Padding(padding: EdgeInsets.all(30.0)),
+             GestureDetector(
+                     onTap: () {
+                        Navigator.push(
+                            context,
+                            new MaterialPageRoute(
+                                builder: (BuildContext context) => Congratulations()));
+                      },
+                      child: Container(
+                        width: double.infinity,
+                        alignment: Alignment.center,
+                        height: ScreenUtil().setHeight(120),
+                        margin: EdgeInsets.symmetric(vertical: 15),
+                        decoration: BoxDecoration(
+                            color: Color(0xFFF1F3F6),
+                            borderRadius: BorderRadius.all(Radius.circular(10)),
+                             gradient: LinearGradient(
+            colors: [palletePink, palleteMediumPink]),),
+                        child: Text(
+                          "Continuar",
+                          style: TextStyle(
+                              color: Colors.white,
+                              fontSize: 16),
+                        ),
+                      ),
+                    ),
 
-              new MaterialButton(
-                color: Colors.red,
-                child: Text("Próximo"),
-                onPressed: (){
-                  questionNumber = 0;
-                  finalScore = 0;
-                  Navigator.push(
-                    context,
-                    new MaterialPageRoute(
-                    builder: (BuildContext context) =>
-                    new MainPage()));
-                },
-              )
             ],
           ),
         ),
@@ -282,4 +336,6 @@ class Summary extends StatelessWidget{
       ),
     );
   }
+
+
 }
