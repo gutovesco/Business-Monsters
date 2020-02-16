@@ -1,7 +1,7 @@
+import 'package:Business_Monsters/pages/rewards_page.dart';
 import 'package:flutter/material.dart';
 import 'package:Business_Monsters/pages/profile_page.dart';
 import 'package:Business_Monsters/pages/home_page.dart';
-import 'package:Business_Monsters/pages/rewards_page.dart';
 import 'package:curved_navigation_bar/curved_navigation_bar.dart';
 
 class Home extends StatefulWidget {
@@ -12,7 +12,7 @@ class Home extends StatefulWidget {
 class _Home extends State<Home> {
   int _page = 1;
   final ProfilePage _profile = new ProfilePage();
-  final RewardsPage _rewards = new RewardsPage();
+  final BenefitsPage _rewards = new BenefitsPage();
   final MainPage _main = MainPage();
 
   Widget _showPage = new MainPage();

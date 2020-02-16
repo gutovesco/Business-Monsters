@@ -1,6 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
-import 'package:Business_Monsters/home.dart';
+import 'package:Business_Monsters/pages/home_page.dart';
+
+
 
 class SignupComplete extends StatefulWidget {
   SignupComplete({Key key}) : super(key: key);
@@ -85,7 +87,7 @@ class _SignupCompleteState extends State<SignupComplete> {
                                   context,
                                   new MaterialPageRoute(
                                       builder: (BuildContext context) =>
-                                          new Home()));
+                                          new MainPage()));
                             },
                             child: Container(
                               width: double.infinity,

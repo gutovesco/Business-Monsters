@@ -1,7 +1,5 @@
 import 'package:flutter/material.dart';
 import 'package:Business_Monsters/utils/colors.dart';
-import 'package:provider/provider.dart';
-import 'package:Business_Monsters/blocs/theme.dart';
 import 'package:flutter_staggered_animations/flutter_staggered_animations.dart';
 import 'package:Business_Monsters/cards/menu_card.dart';
 import 'dart:io';
@@ -16,7 +14,6 @@ class MainPage extends StatefulWidget {
 class _MainPageState extends State<MainPage> {
   @override
   Widget build(BuildContext context) {
-    ThemeChanger _themeChanger = Provider.of<ThemeChanger>(context);
 
     List<Color> card_colors1 = [
       myColors.block1,

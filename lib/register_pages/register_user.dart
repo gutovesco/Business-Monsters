@@ -1,6 +1,5 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
-import 'package:Business_Monsters/old/business-information.dart';
 import 'package:slimy_card/slimy_card.dart';
 import 'package:Business_Monsters/register_pages/signup-complete.dart';
 
