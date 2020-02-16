@@ -85,6 +85,7 @@ class _BenefitsPage extends State<BenefitsPage> {
                         child: Text('x99', textAlign: TextAlign.end,),
                         ),
 
+                        SizedBox(height: 20),
                       Divider(thickness: 1, color: Colors.black),
 
                         Container(
@@ -95,6 +96,34 @@ class _BenefitsPage extends State<BenefitsPage> {
                       decoration: BoxDecoration(
                         image: new DecorationImage(
                         image: new ExactAssetImage('assets/calculator.png'),
+                        )
+                        ),
+                        ),
+
+                        SizedBox(height: 20),
+                        
+                        Container(
+                         margin: EdgeInsets.fromLTRB(0, 20, 250, 5),
+                      constraints: BoxConstraints.expand(
+                        height: 50.0,
+                      ),
+                      decoration: BoxDecoration(
+                        image: new DecorationImage(
+                        image: new ExactAssetImage('assets/cloud.png'),
+                        )
+                        ),
+                        ),
+
+                        SizedBox(height: 20),
+
+                        Container(
+                         margin: EdgeInsets.fromLTRB(0, 20, 250, 5),
+                      constraints: BoxConstraints.expand(
+                        height: 50.0,
+                      ),
+                      decoration: BoxDecoration(
+                        image: new DecorationImage(
+                        image: new ExactAssetImage('assets/curso.png'),
                         )
                         ),
                         ),

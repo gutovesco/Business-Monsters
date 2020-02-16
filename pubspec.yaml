@@ -32,6 +32,8 @@ flutter:
     - assets/profile_pic.png
     - assets/coin.png
     - assets/calculator.png
+    - assets/cloud.png
+    - assets/curso.png
 
   # fonts:
   #   - family: Schyler
