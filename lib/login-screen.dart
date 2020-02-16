@@ -1,7 +1,7 @@
 import 'package:custom_switch/custom_switch.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
-import 'package:test_project/home.dart';
+import 'package:test_project/MainPage.dart';
 import 'package:test_project/test.dart';
 
 class LoginScreen extends StatefulWidget {
@@ -157,7 +157,7 @@ class _LoginScreenState extends State<LoginScreen> {
                         Navigator.push(
                             context,
                             new MaterialPageRoute(
-                                builder: (BuildContext context) => new Home()));
+                                builder: (BuildContext context) => new MainPage()));
                       },
                       child: Container(
                         width: double.infinity,

@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
+import 'package:test_project/MainPage.dart';
 
 
 class SignupComplete extends StatefulWidget {
@@ -11,7 +12,6 @@ class SignupComplete extends StatefulWidget {
 
 class _SignupCompleteState extends State<SignupComplete> {
   bool status = true;
-
   @override
   Widget build(BuildContext context) {
     ScreenUtil.init(context,
@@ -87,7 +87,7 @@ class _SignupCompleteState extends State<SignupComplete> {
                         Navigator.push(
                             context,
                             new MaterialPageRoute(
-                                builder: (BuildContext context) => new SignupComplete()));
+                                builder: (BuildContext context) => new MainPage()));
                       },
                       child: Container(
                         width: double.infinity,
