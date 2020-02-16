@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:Business_Monsters/utils/colors.dart';
 import 'package:flutter_staggered_animations/flutter_staggered_animations.dart';
 import 'package:Business_Monsters/cards/menu_card.dart';
+import 'package:gradient_app_bar/gradient_app_bar.dart';
 import 'dart:io';
 
 MyColors myColors = MyColors();
@@ -53,7 +54,7 @@ class _MainPageState extends State<MainPage> {
 
     return Scaffold(
         backgroundColor: Colors.white,
-        appBar: AppBar(
+        appBar: GradientAppBar(
           automaticallyImplyLeading: false,
           title: Row(
 //          mainAxisAlignment: MainAxisAlignment.center,
@@ -65,19 +66,24 @@ class _MainPageState extends State<MainPage> {
               ),
               Container(
                   padding: const EdgeInsets.all(15.0),
-                  child: Column(
+                  child: Row(
                     children: <Widget>[
                       Text('Joana Souza'),
-                      Text(
-                        "XP: 125",
-                        style: TextStyle(fontSize: 12.0),
+                      SizedBox(width: 5,),
+                      Padding(
+                        padding: EdgeInsets.only(top: 5.0),
+                        child: Text(
+                          "XP: 125",
+                          style: TextStyle(fontSize: 12.0, color: Colors.limeAccent),
+                        ) ,
                       )
+
                     ],
                   ))
             ],
           ),
 //        centerTitle: true,
-          backgroundColor: myColors.bars,
+          gradient: LinearGradient(colors: [myColors.palletePink, myColors.palleteMediumPink]),
           actions: <Widget>[
             PopupMenuButton<String>(
               onSelected: choiceAction,

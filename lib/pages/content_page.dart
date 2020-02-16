@@ -1,18 +1,91 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_staggered_animations/flutter_staggered_animations.dart';
+import 'package:Business_Monsters/utils/colors.dart';
+import 'package:gradient_app_bar/gradient_app_bar.dart';
+
+MyColors myColors = MyColors();
 
 class ContentPage extends StatefulWidget {
   @override
   _ContentPageState createState() => _ContentPageState();
 }
 
+List<String> titleText = [
+  "O que é UX/UI?",
+  "Qual a importância de UX/UI?",
+  "Conceitos básicos",
+  "Aprendendo com exemplos",
+  "Criando seu primeiro projeto",
+  "Ferramentas úteis",
+  "Como engajar o usúario",
+];
+List<String> xpDesc = [
+  "XP: 0 / 30",
+  "XP: 0 / 45",
+  "XP: 0 / 75",
+  "XP: 0 / 40",
+  "XP: 0 / 20",
+  "XP: 0 / 80",
+  "XP: 0 / 55",
+  "XP: 0 / 65",
+];
+List<String> lessonDesc = [
+  "1",
+  "2",
+  "3",
+  "4",
+  "5",
+];
+List<String> phase = ["Fase 1", "Fase 3"];
+List<String> phase2 = ["Fase 2", "Fase 4"];
+
 class _ContentPageState extends State<ContentPage> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
+      appBar: GradientAppBar(
+        title: Row(
+          children: [
+            Text("Trilha UX/UI"),
+          ],
+        ),
+//        centerTitle: true,
+        gradient: LinearGradient(
+            colors: [myColors.palletePink, myColors.palleteMediumPink]),
+        actions: <Widget>[
+          Padding(
+              padding: EdgeInsets.only(right: 10.0),
+              child: IconButton(
+                onPressed: () {
+                  showDialog(
+                      context: context,
+                      builder: (BuildContext context) {
+                        return AlertDialog(
+                          title: new Text("Info"),
+                          content: new Text(
+                              "Não existem erros nessa tela, software bom é software com bug ;)"),
+                          actions: <Widget>[
+                            // usually buttons at the bottom of the dialog
+                            new FlatButton(
+                              child: new Text("OK"),
+                              onPressed: () {
+                                Navigator.of(context).pop();
+                              },
+                            ),
+                          ],
+                        );
+                      });
+                },
+                icon: Icon(
+                  Icons.help,
+                  size: 26.0,
+                ),
+              )),
+        ],
+      ),
       body: AnimationLimiter(
         child: ListView.builder(
-            itemCount: 3,
+            itemCount: 2,
             itemBuilder: (BuildContext context, int index) {
               return AnimationConfiguration.staggeredList(
                 position: index,
@@ -30,19 +103,22 @@ class _ContentPageState extends State<ContentPage> {
                               margin: EdgeInsets.fromLTRB(0, 15, 0, 5),
                               width: 390,
                               child: Card(
+                                color: myColors.palletePink,
                                 shape: RoundedRectangleBorder(
                                   borderRadius: BorderRadius.circular(50.0),
                                 ),
                                 child: Column(
                                   children: <Widget>[
                                     Container(
-                                      margin: EdgeInsets.all(8),
+                                      margin: EdgeInsets.all(12),
                                       child: Text(
-                                        "Fase 1",
-                                        style: TextStyle(fontSize: 21),
+                                        phase[index],
+                                        style: TextStyle(
+                                            fontSize: 24, color: Colors.white),
                                       ),
                                     ),
-                                    umContainer(),
+                                    umContainer(lessonDesc[index],
+                                        xpDesc[index], titleText[index]),
                                     containerDuplo(),
                                   ],
                                 ),
@@ -52,18 +128,22 @@ class _ContentPageState extends State<ContentPage> {
                                 margin: EdgeInsets.fromLTRB(0, 15, 0, 5),
                                 width: 390,
                                 child: Card(
+                                    color: myColors.block5,
                                     shape: RoundedRectangleBorder(
                                       borderRadius: BorderRadius.circular(50.0),
                                     ),
                                     child: Column(children: <Widget>[
                                       Container(
-                                        margin: EdgeInsets.all(8),
+                                        margin: EdgeInsets.all(10),
                                         child: Text(
-                                          "Fase 2",
-                                          style: TextStyle(fontSize: 21),
+                                          phase2[index],
+                                          style: TextStyle(
+                                              fontSize: 24,
+                                              color: Colors.white),
                                         ),
                                       ),
-                                      umContainer(),
+                                      umContainer(lessonDesc[index],
+                                          xpDesc[index], titleText[index + 3]),
                                       containerDuplo(),
                                       containertriplo(),
                                     ])))
@@ -79,7 +159,7 @@ class _ContentPageState extends State<ContentPage> {
     );
   }
 
-  Widget umContainer() {
+  Widget umContainer(String text, String xp, String title) {
     return Container(
         margin: EdgeInsets.fromLTRB(0, 0, 0, 8),
         child: Center(
@@ -91,21 +171,38 @@ class _ContentPageState extends State<ContentPage> {
                 width: 100,
                 height: 100,
                 child: Container(
-                  color: Colors.blue,
+                  decoration: BoxDecoration(color: myColors.palleteMediumPink),
                   child: Center(
-                    child: Text("Missão 1"),
+                    child: Text(
+                      text,
+                      style: TextStyle(
+                        foreground: Paint()
+                          ..style = PaintingStyle.stroke
+                          ..strokeWidth = 3
+                          ..color = Colors.white,
+                        fontSize: 30,
+                      ),
+                    ),
                   ),
                 ),
               ),
             ),
             Container(
+              margin: EdgeInsets.all(4),
               width: 100,
-              child: SafeArea(
-                  child: Center(
-                child: Text("O que é UX?"),
-              )),
+              child: Center(
+                child: Text(
+                  title,
+                  textAlign: TextAlign.center,
+                  style: TextStyle(color: Colors.white, fontSize: 14),
+                ),
+              ),
             ),
-            Text("XP : 0 / 75")
+            Text(
+              xp,
+              textAlign: TextAlign.center,
+              style: TextStyle(color: Colors.limeAccent),
+            )
           ],
         )));
   }
@@ -115,11 +212,11 @@ class _ContentPageState extends State<ContentPage> {
       children: <Widget>[
         Flexible(
           flex: 1,
-          child: umContainer(),
+          child: umContainer(lessonDesc[1], xpDesc[1], titleText[1]),
         ),
         Flexible(
           flex: 1,
-          child: umContainer(),
+          child: umContainer(lessonDesc[2], xpDesc[2], titleText[2]),
         )
       ],
     );
@@ -130,15 +227,15 @@ class _ContentPageState extends State<ContentPage> {
       children: <Widget>[
         Flexible(
           flex: 1,
-          child: umContainer(),
+          child: umContainer(lessonDesc[3], xpDesc[3], titleText[3]),
         ),
         Flexible(
           flex: 1,
-          child: umContainer(),
+          child: umContainer(lessonDesc[4], xpDesc[4], titleText[4]),
         ),
         Flexible(
           flex: 1,
-          child: umContainer(),
+          child: umContainer(lessonDesc[2], xpDesc[2], titleText[2]),
         )
       ],
     );
