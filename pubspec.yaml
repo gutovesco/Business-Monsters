@@ -28,8 +28,6 @@ dev_dependencies:
 flutter:
 
   uses-material-design: true
-
-
   assets:
     - assets/profile_pic.png
 
