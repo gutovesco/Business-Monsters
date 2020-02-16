@@ -11,4 +11,10 @@ class MyColors{
   Color block2 = Color(0xffF9ADA0);
   Color block3 = Color(0xff8380B6);
   Color block4 = Color(0xffC65B7C);
+
+  Color palleteBlue = Color(0xff010a43);
+  Color palleteLightPink = Color(0xffffc2c2);
+  Color palleteMediumPink = Color(0xffff9d9d);
+  Color palletePink = Color(0xffff2e63);
+
 }
