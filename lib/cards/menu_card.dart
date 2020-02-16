@@ -1,3 +1,4 @@
+import 'package:Business_Monsters/pages/content_page.dart';
 import 'package:flutter/material.dart';
 import 'package:clay_containers/clay_containers.dart';
 
@@ -11,17 +12,17 @@ class MenuCard extends StatelessWidget {
   final Color color;
   final Color color2;
 
-  const MenuCard({
-    Key key,
-    this.width,
-    this.height,
-    this.text,
-    this.color,
-    this.text2,
-    this.color2,
-    this.desc,
-    this.desc2
-  }) : super(key: key);
+  const MenuCard(
+      {Key key,
+      this.width,
+      this.height,
+      this.text,
+      this.color,
+      this.text2,
+      this.color2,
+      this.desc,
+      this.desc2})
+      : super(key: key);
 
   @override
   Widget build(BuildContext context) {
@@ -43,22 +44,30 @@ class MenuCard extends StatelessWidget {
 //              ),
 //            ],
           ),
-          child: ClayContainer(
-            color: color,
-            height: width,
-            width: height,
-            borderRadius: 25,
-            depth: 40,
-            child: Center(
-              child: Padding(
-                padding: EdgeInsets.all(20),
-                child: Column(
-                  crossAxisAlignment: CrossAxisAlignment.center,
-                  mainAxisAlignment: MainAxisAlignment.center,
-                  children: <Widget>[
-                    ClayText(text, emboss: false, size: 20),
-                    ClayText(desc, emboss: false, size: 12),
-                  ],
+          child: GestureDetector(
+            onTap: () {
+              Navigator.push(
+                  context,
+                  new MaterialPageRoute(
+                      builder: (BuildContext context) => new ContentPage()));
+            },
+            child: ClayContainer(
+              color: color,
+              height: width,
+              width: height,
+              borderRadius: 25,
+              depth: 40,
+              child: Center(
+                child: Padding(
+                  padding: EdgeInsets.all(20),
+                  child: Column(
+                    crossAxisAlignment: CrossAxisAlignment.center,
+                    mainAxisAlignment: MainAxisAlignment.center,
+                    children: <Widget>[
+                      ClayText(text, emboss: false, size: 20),
+                      ClayText(desc, emboss: false, size: 12),
+                    ],
+                  ),
                 ),
               ),
             ),
@@ -80,22 +89,30 @@ class MenuCard extends StatelessWidget {
 //              ),
 //            ],
           ),
-          child: ClayContainer(
-            color: color2,
-            height: width,
-            width: height,
-            borderRadius: 25,
-            depth: 40,
-            child: Center(
-              child: Padding(
-                padding: EdgeInsets.all(20),
-                child: Column(
-                  crossAxisAlignment: CrossAxisAlignment.center,
-                  mainAxisAlignment: MainAxisAlignment.center,
-                  children: <Widget>[
-                    ClayText(text2, emboss: false, size: 20),
-                    ClayText(desc2, emboss: false, size: 12),
-                  ],
+          child: GestureDetector(
+            onTap: () {
+              Navigator.push(
+                  context,
+                  new MaterialPageRoute(
+                      builder: (BuildContext context) => new ContentPage()));
+            },
+            child: ClayContainer(
+              color: color2,
+              height: width,
+              width: height,
+              borderRadius: 25,
+              depth: 40,
+              child: Center(
+                child: Padding(
+                  padding: EdgeInsets.all(20),
+                  child: Column(
+                    crossAxisAlignment: CrossAxisAlignment.center,
+                    mainAxisAlignment: MainAxisAlignment.center,
+                    children: <Widget>[
+                      ClayText(text2, emboss: false, size: 20),
+                      ClayText(desc2, emboss: false, size: 12),
+                    ],
+                  ),
                 ),
               ),
             ),

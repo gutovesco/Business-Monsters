@@ -1,8 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
-import 'package:Business_Monsters/register_pages/business-information.dart';
+import 'package:Business_Monsters/old/business-information.dart';
 import 'package:slimy_card/slimy_card.dart';
-import 'package:Business_Monsters/signup-complete.dart';
+import 'package:Business_Monsters/register_pages/signup-complete.dart';
 
 
 
@@ -12,9 +12,8 @@ class SlimyCardPage2 extends StatefulWidget {
 }
 
 class _SlimyCardPage2 extends State<SlimyCardPage2> {
-
-    final List<String> area = ["Finanças", "Comercial", 'Tecnologia'];
-  String selectedarea = "Tecnologia";
+  String selectedSubject = "Ramo";
+  final List<String> subjects = ["Tecnologia", "Comércio", "Finança", "Educação", "Ramo"];
 
   Widget build(BuildContext context) {
     return Scaffold(
@@ -39,6 +38,7 @@ class _SlimyCardPage2 extends State<SlimyCardPage2> {
               ]);
             })));
   }
+
   // This widget will be passed as Top Card's Widget.
   Widget topCardWidget(String data) {
     return Column(
@@ -52,6 +52,7 @@ class _SlimyCardPage2 extends State<SlimyCardPage2> {
                       fontWeight: FontWeight.bold))),
         ]);
   }
+
   // This widget will be passed as Bottom Card's Widget.
   Widget bottomCardWidget() {
     return Scaffold(
@@ -124,17 +125,17 @@ class _SlimyCardPage2 extends State<SlimyCardPage2> {
                   )
                 ),
                 SizedBox(height: 10),
-                DropdownButton<String>(
+        DropdownButton<String>(
         iconSize: 24,
         elevation: 6,
-        style: TextStyle(color: Colors.white, fontSize: 16),
-        value: selectedarea,
+        style: TextStyle(color: Colors.black),
+        value: selectedSubject,
         onChanged: (value) {
           setState(() {
-            selectedarea = value;
+            selectedSubject = value;
           });
         },
-        items: area.map<DropdownMenuItem<String>>((value) {
+        items: subjects.map<DropdownMenuItem<String>>((value) {
           return DropdownMenuItem(
             child: Text(value),
             value: value,
@@ -177,4 +178,5 @@ class _SlimyCardPage2 extends State<SlimyCardPage2> {
                       ),
                     ),
 
-                    ])))));}}
+                    ])))));}
+}

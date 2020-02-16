@@ -123,7 +123,23 @@ class _MainPageState extends State<MainPage> {
 
   void choiceAction(String choice) {
     if (choice == Constants.DarkMode) {
-      print("DarkMode");
+      showDialog(
+          context: context,
+          builder: (BuildContext context) {
+            return AlertDialog(
+              title: new Text("Erro"),
+              content: new Text("Deixe de frescura e use da forma que está ;)"),
+              actions: <Widget>[
+                // usually buttons at the bottom of the dialog
+                new FlatButton(
+                  child: new Text("OK"),
+                  onPressed: () {
+                    Navigator.of(context).pop();
+                  },
+                ),
+              ],
+            );
+          });
     } else if (choice == Constants.About) {
       showDialog(
           context: context,
