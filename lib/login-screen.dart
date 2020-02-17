@@ -56,11 +56,11 @@ class _LoginScreenState extends State<LoginScreen> {
                       children: <Widget>[
                         TextField(
                           style:
-                              TextStyle(color: Color.fromRGBO(78, 165, 4, 100)),
+                              TextStyle(color: palleteMediumPink),
                           decoration: InputDecoration(
                               focusedBorder: UnderlineInputBorder(
                                 borderSide: BorderSide(
-                                    color: Color.fromRGBO(78, 165, 4, 100),
+                                    color: palleteMediumPink,
                                     width: 2),
                               ),
                               labelText: "Usuário",
