@@ -33,6 +33,7 @@ class _ProfilePageState extends State<ProfilePage> {
                       children: <Widget>[
                         Text("Pontos XP: 125",
                           style: TextStyle(
+                            fontFamily: 'Squada One',
                               fontWeight: FontWeight.w700,
                               fontSize: 16,
                               color: Colors.orange),
@@ -40,6 +41,7 @@ class _ProfilePageState extends State<ProfilePage> {
                         SizedBox(height: 10.0),
                         Text("Próximo (250XP):",
                           style: TextStyle(
+                            fontFamily: 'Squada One',
                               fontWeight: FontWeight.w700,
                               fontSize: 16,
                               color: Colors.pink),
@@ -60,6 +62,7 @@ class _ProfilePageState extends State<ProfilePage> {
                     Text(
                       "Olá, Joana Souza.",
                       style: TextStyle(
+                        fontFamily: 'Squada One',
                           fontWeight: FontWeight.w700,
                           fontSize: 24,
                           color: Colors.pink),
@@ -93,6 +96,7 @@ class _ProfilePageState extends State<ProfilePage> {
                             Text(
                               "Histórico",
                               style: TextStyle(
+                                fontFamily: 'Squada One',
                                   fontWeight: FontWeight.w900,
                                   fontSize: 24,
                                   color: Colors.black),
@@ -100,6 +104,7 @@ class _ProfilePageState extends State<ProfilePage> {
                             Text(
                               "Ver tudo",
                               style: TextStyle(
+                                fontFamily: 'Squada One',
                                   fontWeight: FontWeight.w700,
                                   fontSize: 16,
                                   color: Colors.grey[800]),
@@ -121,6 +126,7 @@ class _ProfilePageState extends State<ProfilePage> {
                               child: Text(
                                 "Tudo",
                                 style: TextStyle(
+                                  fontFamily: 'Squada One',
                                     fontWeight: FontWeight.w700,
                                     fontSize: 14,
                                     color: Colors.grey[900]),
@@ -154,6 +160,7 @@ class _ProfilePageState extends State<ProfilePage> {
                                   Text(
                                     "Prêmios",
                                     style: TextStyle(
+                                      fontFamily: 'Squada One',
                                         fontWeight: FontWeight.w700,
                                         fontSize: 14,
                                         color: Colors.grey[900]),
@@ -189,6 +196,7 @@ class _ProfilePageState extends State<ProfilePage> {
                                   Text(
                                     "+XP",
                                     style: TextStyle(
+                                      fontFamily: 'Squada One',
                                         fontWeight: FontWeight.w700,
                                         fontSize: 14,
                                         color: Colors.grey[900]),
@@ -220,6 +228,7 @@ class _ProfilePageState extends State<ProfilePage> {
                         child: Text(
                           "Hoje",
                           style: TextStyle(
+                            fontFamily: 'Squada One',
                               fontSize: 15,
                               fontWeight: FontWeight.w700,
                               color: Colors.grey[500]),
@@ -264,6 +273,7 @@ class _ProfilePageState extends State<ProfilePage> {
                                       Text(
                                         "ContaJá",
                                         style: TextStyle(
+                                          fontFamily: 'Squada One',
                                             fontSize: 18,
                                             fontWeight: FontWeight.w700,
                                             color: Colors.grey[900]),
@@ -271,6 +281,7 @@ class _ProfilePageState extends State<ProfilePage> {
                                       Text(
                                         "Resgate efetuado",
                                         style: TextStyle(
+                                          fontFamily: 'Squada One',
                                             fontSize: 15,
                                             fontWeight: FontWeight.w700,
                                             color: Colors.grey[500]),
@@ -284,6 +295,7 @@ class _ProfilePageState extends State<ProfilePage> {
                                     Text(
                                       "3 meses",
                                       style: TextStyle(
+                                        fontFamily: 'Squada One',
                                           fontSize: 18,
                                           fontWeight: FontWeight.w700,
                                           color: Colors.lightGreen),
@@ -291,6 +303,7 @@ class _ProfilePageState extends State<ProfilePage> {
                                     Text(
                                       "Grátis",
                                       style: TextStyle(
+                                        fontFamily: 'Squada One',
                                           fontSize: 15,
                                           fontWeight: FontWeight.w700,
                                           color: Colors.grey[500]),
@@ -345,6 +358,7 @@ class _ProfilePageState extends State<ProfilePage> {
                                       Text(
                                         "NaNuvem",
                                         style: TextStyle(
+                                          fontFamily: 'Squada One',
                                             fontSize: 18,
                                             fontWeight: FontWeight.w700,
                                             color: Colors.grey[900]),
@@ -353,6 +367,7 @@ class _ProfilePageState extends State<ProfilePage> {
                                         "Resgate efetuado",
                                         style: TextStyle(
                                             fontSize: 15,
+                                            fontFamily: 'Squada One',
                                             fontWeight: FontWeight.w700,
                                             color: Colors.grey[500]),
                                       ),
@@ -365,6 +380,7 @@ class _ProfilePageState extends State<ProfilePage> {
                                     Text(
                                       "1 mês",
                                       style: TextStyle(
+                                        fontFamily: 'Squada One',
                                           fontSize: 18,
                                           fontWeight: FontWeight.w700,
                                           color: Colors.lightGreen),
@@ -373,6 +389,7 @@ class _ProfilePageState extends State<ProfilePage> {
                                       "Grátis",
                                       style: TextStyle(
                                           fontSize: 15,
+                                          fontFamily: 'Squada One',
                                           fontWeight: FontWeight.w700,
                                           color: Colors.grey[500]),
                                     ),
@@ -397,6 +414,7 @@ class _ProfilePageState extends State<ProfilePage> {
                         child: Text(
                           "Ontem",
                           style: TextStyle(
+                            fontFamily: 'Squada One',
                               fontSize: 15,
                               fontWeight: FontWeight.w700,
                               color: Colors.grey[500]),
@@ -442,6 +460,7 @@ class _ProfilePageState extends State<ProfilePage> {
                                         "Conclusão - Fase 1",
                                         style: TextStyle(
                                             fontSize: 18,
+                                            fontFamily: 'Squada One',
                                             fontWeight: FontWeight.w700,
                                             color: Colors.grey[900]),
                                       ),
@@ -449,6 +468,7 @@ class _ProfilePageState extends State<ProfilePage> {
                                         "Trilha UX/UI",
                                         style: TextStyle(
                                             fontSize: 15,
+                                            fontFamily: 'Squada One',
                                             fontWeight: FontWeight.w700,
                                             color: Colors.grey[500]),
                                       ),
@@ -462,6 +482,7 @@ class _ProfilePageState extends State<ProfilePage> {
                                       "+150",
                                       style: TextStyle(
                                           fontSize: 18,
+                                          fontFamily: 'Squada One',
                                           fontWeight: FontWeight.w700,
                                           color: Colors.orange),
                                     ),
@@ -469,6 +490,7 @@ class _ProfilePageState extends State<ProfilePage> {
                                       "XP",
                                       style: TextStyle(
                                           fontSize: 15,
+                                          fontFamily: 'Squada One',
                                           fontWeight: FontWeight.w700,
                                           color: Colors.grey[500]),
                                     ),

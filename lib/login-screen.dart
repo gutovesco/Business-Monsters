@@ -41,9 +41,11 @@ class _LoginScreenState extends State<LoginScreen> {
                         "Business Monsters",
                         textAlign: TextAlign.center,
                         style: TextStyle(
+                          fontFamily: 'LuckiestGuy',
                             color: palleteMediumPink,
                             fontSize: 26,
-                            fontWeight: FontWeight.bold),
+                            fontWeight: FontWeight.bold,
+                        ),
                       ),
                     ),
                     SizedBox(
@@ -65,6 +67,7 @@ class _LoginScreenState extends State<LoginScreen> {
                               ),
                               labelText: "Usuário",
                               labelStyle: TextStyle(
+                                fontFamily: 'LuckiestGuy',
                                   color: palleteMediumPink,
                                   fontSize: 14)),
                         ),
@@ -105,6 +108,7 @@ class _LoginScreenState extends State<LoginScreen> {
                           ),
                           labelText: "Senha",
                           labelStyle: TextStyle(
+                            fontFamily: 'LuckiestGuy',
                               color: palleteMediumPink,
                               fontSize: 14)),
                     ),
@@ -115,16 +119,6 @@ class _LoginScreenState extends State<LoginScreen> {
                       children: <Widget>[
                         Container(
                           decoration: BoxDecoration(
-                              /*boxShadow: [
-                            BoxShadow(
-                                offset: Offset(5, 5),
-                                color: Color(0xFF4D70A6).withOpacity(0.2),
-                                blurRadius: 16),
-                            BoxShadow(
-                                offset: Offset(-10, -10),
-                                color: Color.fromARGB(170, 255, 255, 255),
-                                blurRadius: 10),
-                          ]*/
                               ),
                           child: CustomSwitch(
                             activeColor: palleteMediumPink,
@@ -142,16 +136,9 @@ class _LoginScreenState extends State<LoginScreen> {
                         Text(
                           "Lembrar dados",
                           style:
-                              TextStyle(color: palleteLightPink, fontSize: 14),
+                              TextStyle(color: palleteLightPink, fontSize: 14, fontFamily: 'LuckiestGuy',),
                         ),
                         Spacer(),
-                        Text(
-                          "Esqueceu a senha?",
-                          style: TextStyle(
-                            color: palleteMediumPink,
-                            fontSize: 14,
-                          ),
-                        ),
                       ],
                     ),
                     SizedBox(
@@ -185,6 +172,7 @@ class _LoginScreenState extends State<LoginScreen> {
                         child: Text(
                           "Login",
                           style: TextStyle(
+                            fontFamily: 'LuckiestGuy',
                               color: palleteMediumPink,
                               fontSize: 16),
                         ),
@@ -219,6 +207,7 @@ class _LoginScreenState extends State<LoginScreen> {
                         child: Text(
                           "Registrar",
                           style: TextStyle(
+                            fontFamily: 'LuckiestGuy',
                               color: palleteMediumPink,
                               fontSize: 16),
                         ),
