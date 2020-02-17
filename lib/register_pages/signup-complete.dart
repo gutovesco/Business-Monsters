@@ -1,6 +1,6 @@
+import 'package:Business_Monsters/home.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
-import 'package:Business_Monsters/pages/home_page.dart';
 
 Color palleteBlue = Color(0xff010a43);
 Color palleteLightPink = Color(0xffffc2c2);
@@ -38,6 +38,7 @@ class _SignupCompleteState extends State<SignupComplete> {
                             "Business Monsters",
                             textAlign: TextAlign.left,
                             style: TextStyle(
+                              fontFamily: 'LuckiestGuy',
                                 color: palleteMediumPink,
                                 fontSize: 20,
                                 fontWeight: FontWeight.bold),
@@ -47,6 +48,7 @@ class _SignupCompleteState extends State<SignupComplete> {
                             child: Text('Uhulll!!',
                                 textAlign: TextAlign.center,
                                 style: TextStyle(
+                                  fontFamily: 'LuckiestGuy',
                                   fontSize: 26,
                                   color: Colors.black,
                                 )),
@@ -69,6 +71,7 @@ class _SignupCompleteState extends State<SignupComplete> {
                                 'Temos um novo monstrinho empreendedor!\nVamos torná-lo gigante!',
                                 textAlign: TextAlign.center,
                                 style: TextStyle(
+                                  fontFamily: 'LuckiestGuy',
                                   fontSize: 20,
                                   color: Colors.black,
                                 )),
@@ -79,6 +82,7 @@ class _SignupCompleteState extends State<SignupComplete> {
                                 'A cada missão concluída, você receberá algumas moedas.\n Resgate benefícios incríveis com elas!',
                                 textAlign: TextAlign.center,
                                 style: TextStyle(
+                                  fontFamily: 'LuckiestGuy',
                                   fontSize: 20,
                                   color: Colors.grey[500],
                                 )),
@@ -89,7 +93,7 @@ class _SignupCompleteState extends State<SignupComplete> {
                         Navigator.push(
                             context,
                             new MaterialPageRoute(
-                                builder: (BuildContext context) => MainPage()));
+                                builder: (BuildContext context) => Home()));
                       },
                       child: Container(
                         width: double.infinity,
@@ -104,6 +108,7 @@ class _SignupCompleteState extends State<SignupComplete> {
                         child: Text(
                           "Submeter",
                           style: TextStyle(
+                            fontFamily: 'LuckiestGuy',
                               color: Colors.white,
                               fontSize: 16),
                         ),

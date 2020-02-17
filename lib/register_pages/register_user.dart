@@ -50,6 +50,8 @@ class _SlimyCardPage2 extends State<SlimyCardPage2> {
           Container(
               child: Text(data,
                   style: TextStyle(
+                    fontFamily: 'LuckiestGuy',
+                    letterSpacing: 1,
                       color: Colors.white,
                       fontSize: 20,
                       fontWeight: FontWeight.bold))),
@@ -77,13 +79,14 @@ class _SlimyCardPage2 extends State<SlimyCardPage2> {
                           ),
                           labelText: "Usuário",
                           labelStyle: TextStyle(
+                            fontFamily: 'LuckiestGuy',
                               color: Colors.white,
                               fontSize: 16,
                     ),
                   ),
                 ),
                 TextField(
-                      style: TextStyle(color: Colors.white),
+                      style: TextStyle(color: Colors.white, fontFamily: 'LuckiestGuy',),
                       decoration: InputDecoration(
                           focusedBorder: UnderlineInputBorder(
                             borderSide: BorderSide(
@@ -92,6 +95,7 @@ class _SlimyCardPage2 extends State<SlimyCardPage2> {
                           ),
                           labelText: "E-mail",
                           labelStyle: TextStyle(
+                            fontFamily: 'LuckiestGuy',
                               color: Colors.white,
                               fontSize: 16,
                     ),
@@ -107,13 +111,14 @@ class _SlimyCardPage2 extends State<SlimyCardPage2> {
                           ),
                           labelText: "Senha",
                           labelStyle: TextStyle(
+                            fontFamily: 'LuckiestGuy',
                               color: Colors.white,
                               fontSize: 16,
                     ),
                   )
                 ),
                 TextField(
-                      style: TextStyle(color: Colors.white),
+                      style: TextStyle(color: Colors.white, fontFamily: 'LuckiestGuy',),
                       decoration: InputDecoration(
                           focusedBorder: UnderlineInputBorder(
                             borderSide: BorderSide(
@@ -122,6 +127,7 @@ class _SlimyCardPage2 extends State<SlimyCardPage2> {
                           ),
                           labelText: "Confirmar Senha",
                           labelStyle: TextStyle(
+                            fontFamily: 'LuckiestGuy',
                               color: Colors.white,
                               fontSize: 16,
                     ),
@@ -129,10 +135,10 @@ class _SlimyCardPage2 extends State<SlimyCardPage2> {
                 ),
                 SizedBox(height: 10),
         DropdownButton<String>(
-          focusColor: palletePink,
+          focusColor: palleteMediumPink,
         iconSize: 24,
         elevation: 6,
-        style: TextStyle(color: Colors.black),
+        style: TextStyle(color: palleteLightPink, fontFamily: 'LuckiestGuy',),
         value: selectedSubject,
         onChanged: (value) {
           setState(() {
@@ -176,7 +182,8 @@ class _SlimyCardPage2 extends State<SlimyCardPage2> {
                         child: Text(
                           "Submeter",
                           style: TextStyle(
-                              color: palletePink,
+                            fontFamily: 'LuckiestGuy',
+                              color: palleteMediumPink,
                               fontSize: 16),
                         ),
                       ),

@@ -59,7 +59,7 @@ class _Home extends State<Home> {
               ),
               Text(
                 "Perfil",
-                style: TextStyle(color: Colors.white, fontSize: 10),
+                style: TextStyle(color: Colors.white, fontSize: 10, ),
               ),
             ],
           ),
@@ -72,7 +72,7 @@ class _Home extends State<Home> {
               ),
               Text(
                 "Material",
-                style: TextStyle(color: Colors.white, fontSize: 10),
+                style: TextStyle(color: Colors.white, fontSize: 10, ),
               ),
             ],
           ),
@@ -85,7 +85,7 @@ class _Home extends State<Home> {
               ),
               Text(
                 "Prêmios",
-                style: TextStyle(color: Colors.white, fontSize: 10),
+                style: TextStyle(color: Colors.white, fontSize: 10, ),
               ),
             ],
           ),
