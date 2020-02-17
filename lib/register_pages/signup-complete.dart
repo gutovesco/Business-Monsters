@@ -2,7 +2,10 @@ import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:Business_Monsters/pages/home_page.dart';
 
-
+Color palleteBlue = Color(0xff010a43);
+Color palleteLightPink = Color(0xffffc2c2);
+Color palleteMediumPink = Color(0xffff9d9d);
+Color palletePink = Color(0xffff2e63);
 
 class SignupComplete extends StatefulWidget {
   SignupComplete({Key key}) : super(key: key);
@@ -24,18 +27,18 @@ class _SignupCompleteState extends State<SignupComplete> {
             child: SingleChildScrollView(
                 child: Container(
                     margin: EdgeInsets.symmetric(
-                        horizontal: ScreenUtil().setWidth(70)),
+                        horizontal: ScreenUtil().setWidth(60)),
                     child: Column(
                         crossAxisAlignment: CrossAxisAlignment.start,
                         children: <Widget>[
                           SizedBox(
-                            height: ScreenUtil().setHeight(40),
+                            height: ScreenUtil().setHeight(30),
                           ),
                           Text(
                             "Business Monsters",
                             textAlign: TextAlign.left,
                             style: TextStyle(
-                                color: Colors.black,
+                                color: palleteMediumPink,
                                 fontSize: 20,
                                 fontWeight: FontWeight.bold),
                           ),
@@ -80,44 +83,32 @@ class _SignupCompleteState extends State<SignupComplete> {
                                   color: Colors.grey[500],
                                 )),
                           ),
-                          SizedBox(height: 20),
+                          SizedBox(height: 10),
                           GestureDetector(
-                            onTap: () {
-                              Navigator.push(
-                                  context,
-                                  new MaterialPageRoute(
-                                      builder: (BuildContext context) =>
-                                          new MainPage()));
-                            },
-                            child: Container(
-                              width: double.infinity,
-                              alignment: Alignment.center,
-                              height: ScreenUtil().setHeight(120),
-                              margin: EdgeInsets.symmetric(vertical: 15),
-                              decoration: BoxDecoration(
-                                  color: Color(0xFFF1F3F6),
-                                  borderRadius:
-                                      BorderRadius.all(Radius.circular(10)),
-                                  boxShadow: [
-                                    BoxShadow(
-                                        offset: Offset(10, 10),
-                                        color:
-                                            Color(0xFF4D70A6).withOpacity(0.2),
-                                        blurRadius: 16),
-                                    BoxShadow(
-                                        offset: Offset(-10, -10),
-                                        color:
-                                            Color.fromARGB(170, 255, 255, 255),
-                                        blurRadius: 10),
-                                  ]),
-                              child: Text(
-                                "Começar",
-                                style: TextStyle(
-                                    color: Color.fromRGBO(78, 165, 4, 100),
-                                    fontSize: 16),
-                              ),
-                            ),
-                          ),
+                     onTap: () {
+                        Navigator.push(
+                            context,
+                            new MaterialPageRoute(
+                                builder: (BuildContext context) => MainPage()));
+                      },
+                      child: Container(
+                        width: double.infinity,
+                        alignment: Alignment.center,
+                        height: ScreenUtil().setHeight(120),
+                        margin: EdgeInsets.symmetric(vertical: 15),
+                        decoration: BoxDecoration(
+                            color: Color(0xFFF1F3F6),
+                            borderRadius: BorderRadius.all(Radius.circular(10)),
+                             gradient: LinearGradient(
+            colors: [palletePink, palleteMediumPink]),),
+                        child: Text(
+                          "Submeter",
+                          style: TextStyle(
+                              color: Colors.white,
+                              fontSize: 16),
+                        ),
+                      ),
+                    ),
                         ])))));
   }
 }

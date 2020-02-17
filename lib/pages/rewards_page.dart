@@ -2,6 +2,11 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 
+Color palleteBlue = Color(0xff010a43);
+Color palleteLightPink = Color(0xffffc2c2);
+Color palleteMediumPink = Color(0xffff9d9d);
+Color palletePink = Color(0xffff2e63);
+
 class BenefitsPage extends StatefulWidget {
   BenefitsPage({Key key}) : super(key: key);
 
@@ -61,7 +66,7 @@ class _BenefitsPage extends State<BenefitsPage> {
                       mainAxisAlignment: MainAxisAlignment.end,
                       children: <Widget>[
                         FlatButton(
-                          color: Colors.amber,
+                          color: palleteMediumPink,
                           onPressed: () {}, 
                           child: Text(
                             'Buscar',
@@ -72,21 +77,8 @@ class _BenefitsPage extends State<BenefitsPage> {
                       ],
                     ),
                    
-                       Container(
-                         margin: EdgeInsets.fromLTRB(0, 20, 250, 20),
-                      constraints: BoxConstraints.expand(
-                        height: 50.0,
-                      ),
-                      decoration: BoxDecoration(
-                        image: new DecorationImage(
-                        image: new ExactAssetImage('assets/coin.png'),
-                        )
-                        ),
-                        child: Text('x99', textAlign: TextAlign.end,),
-                        ),
-
-                        SizedBox(height: 20),
-                      Divider(thickness: 1, color: Colors.black),
+                        SizedBox(height: 50),
+                      Divider(thickness: .5, color: Colors.black),
 
                         Container(
                          margin: EdgeInsets.fromLTRB(0, 20, 250, 5),

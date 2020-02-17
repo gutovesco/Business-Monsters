@@ -3,7 +3,10 @@ import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:slimy_card/slimy_card.dart';
 import 'package:Business_Monsters/register_pages/signup-complete.dart';
 
-
+Color palleteBlue = Color(0xff010a43);
+Color palleteLightPink = Color(0xffffc2c2);
+Color palleteMediumPink = Color(0xffff9d9d);
+Color palletePink = Color(0xffff2e63);
 
 class SlimyCardPage2 extends StatefulWidget {
   @override
@@ -11,8 +14,9 @@ class SlimyCardPage2 extends StatefulWidget {
 }
 
 class _SlimyCardPage2 extends State<SlimyCardPage2> {
-  String selectedSubject = "Ramo";
+
   final List<String> subjects = ["Tecnologia", "Comércio", "Finança", "Educação", "Ramo"];
+  String selectedSubject = "Ramo";
 
   Widget build(BuildContext context) {
     return Scaffold(
@@ -25,7 +29,7 @@ class _SlimyCardPage2 extends State<SlimyCardPage2> {
               return ListView(padding: EdgeInsets.zero, children: <Widget>[
                 SlimyCard(
                   slimeEnabled: true,
-                  color: const Color(0xff0ffa61),
+                  color: palleteMediumPink,
                   topCardHeight: 199,
                   bottomCardHeight: 420,
                   width: 400,
@@ -55,11 +59,11 @@ class _SlimyCardPage2 extends State<SlimyCardPage2> {
   // This widget will be passed as Bottom Card's Widget.
   Widget bottomCardWidget() {
     return Scaffold(
-      backgroundColor: Color(0xff0ffa61),
+      backgroundColor: palleteMediumPink,
       body: SafeArea(
           child: SingleChildScrollView(
             child: Container(
-              color:Color(0xff0ffa61),
+              color: palleteMediumPink,
                 child: Column(
                   crossAxisAlignment: CrossAxisAlignment.start,
                   children: <Widget>[
@@ -125,6 +129,7 @@ class _SlimyCardPage2 extends State<SlimyCardPage2> {
                 ),
                 SizedBox(height: 10),
         DropdownButton<String>(
+          focusColor: palletePink,
         iconSize: 24,
         elevation: 6,
         style: TextStyle(color: Colors.black),
@@ -171,7 +176,7 @@ class _SlimyCardPage2 extends State<SlimyCardPage2> {
                         child: Text(
                           "Submeter",
                           style: TextStyle(
-                              color: Color.fromRGBO(78, 165, 4, 100),
+                              color: palletePink,
                               fontSize: 16),
                         ),
                       ),

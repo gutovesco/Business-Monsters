@@ -4,7 +4,10 @@ import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:Business_Monsters/register_pages/register_user.dart';
 import 'package:Business_Monsters/home.dart';
 
-
+Color palleteBlue = Color(0xff010a43);
+Color palleteLightPink = Color(0xffffc2c2);
+Color palleteMediumPink = Color(0xffff9d9d);
+Color palletePink = Color(0xffff2e63);
 
 class LoginScreen extends StatefulWidget {
   LoginScreen({Key key}) : super(key: key);
@@ -38,7 +41,7 @@ class _LoginScreenState extends State<LoginScreen> {
                         "Business Monsters",
                         textAlign: TextAlign.center,
                         style: TextStyle(
-                            color: Color.fromRGBO(78, 165, 4, 100),
+                            color: palleteMediumPink,
                             fontSize: 26,
                             fontWeight: FontWeight.bold),
                       ),
@@ -60,9 +63,9 @@ class _LoginScreenState extends State<LoginScreen> {
                                     color: Color.fromRGBO(78, 165, 4, 100),
                                     width: 2),
                               ),
-                              labelText: "Username",
+                              labelText: "Usuário",
                               labelStyle: TextStyle(
-                                  color: Color.fromRGBO(78, 165, 4, 100),
+                                  color: palleteMediumPink,
                                   fontSize: 14)),
                         ),
                         Positioned(
@@ -93,16 +96,16 @@ class _LoginScreenState extends State<LoginScreen> {
                       height: ScreenUtil().setHeight(100),
                     ),
                     TextField(
-                      style: TextStyle(color: Color.fromRGBO(78, 165, 4, 100)),
+                      style: TextStyle(color: palleteMediumPink),
                       decoration: InputDecoration(
                           focusedBorder: UnderlineInputBorder(
                             borderSide: BorderSide(
-                                color: Color.fromRGBO(78, 165, 4, 100),
+                                color: palleteMediumPink,
                                 width: 2),
                           ),
-                          labelText: "Password",
+                          labelText: "Senha",
                           labelStyle: TextStyle(
-                              color: Color.fromRGBO(78, 165, 4, 100),
+                              color: palleteMediumPink,
                               fontSize: 14)),
                     ),
                     SizedBox(
@@ -124,7 +127,7 @@ class _LoginScreenState extends State<LoginScreen> {
                           ]*/
                               ),
                           child: CustomSwitch(
-                            activeColor: Color.fromRGBO(78, 165, 4, 100),
+                            activeColor: palleteMediumPink,
                             value: status,
                             onChanged: (value) {
                               setState(() {
@@ -137,15 +140,15 @@ class _LoginScreenState extends State<LoginScreen> {
                           width: 10,
                         ),
                         Text(
-                          "Remember me",
+                          "Lembrar dados",
                           style:
-                              TextStyle(color: Colors.grey[600], fontSize: 14),
+                              TextStyle(color: palleteLightPink, fontSize: 14),
                         ),
                         Spacer(),
                         Text(
-                          "Forgot Password?",
+                          "Esqueceu a senha?",
                           style: TextStyle(
-                            color: Color.fromRGBO(78, 165, 4, 100),
+                            color: palleteMediumPink,
                             fontSize: 14,
                           ),
                         ),
@@ -182,7 +185,7 @@ class _LoginScreenState extends State<LoginScreen> {
                         child: Text(
                           "Login",
                           style: TextStyle(
-                              color: Color.fromRGBO(78, 165, 4, 100),
+                              color: palleteMediumPink,
                               fontSize: 16),
                         ),
                       ),
@@ -214,9 +217,9 @@ class _LoginScreenState extends State<LoginScreen> {
                                   blurRadius: 10),
                             ]),
                         child: Text(
-                          "Sign Up",
+                          "Registrar",
                           style: TextStyle(
-                              color: Color.fromRGBO(78, 165, 4, 100),
+                              color: palleteMediumPink,
                               fontSize: 16),
                         ),
                       ),
