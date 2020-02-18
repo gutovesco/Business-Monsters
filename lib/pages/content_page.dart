@@ -1,3 +1,4 @@
+import 'package:Business_Monsters/pages/mission.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_staggered_animations/flutter_staggered_animations.dart';
 import 'package:Business_Monsters/utils/colors.dart';
@@ -160,7 +161,9 @@ class _ContentPageState extends State<ContentPage> {
   }
 
   Widget umContainer(String text, String xp, String title) {
-    return Container(
+    return GestureDetector(
+      onTap: () => Navigator.push(context,new MaterialPageRoute(builder: (BuildContext context) => Mission())),
+      child: Container(
         margin: EdgeInsets.fromLTRB(0, 0, 0, 8),
         child: Center(
             child: Column(
@@ -204,7 +207,8 @@ class _ContentPageState extends State<ContentPage> {
               style: TextStyle(color: Colors.limeAccent),
             )
           ],
-        )));
+        ))),
+    );
   }
 
   Widget containerDuplo() {
