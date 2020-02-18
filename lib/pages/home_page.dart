@@ -3,7 +3,6 @@ import 'package:Business_Monsters/utils/colors.dart';
 import 'package:flutter_staggered_animations/flutter_staggered_animations.dart';
 import 'package:Business_Monsters/cards/menu_card.dart';
 import 'package:gradient_app_bar/gradient_app_bar.dart';
-import 'package:url_launcher/url_launcher.dart';
 import 'dart:io';
 
 MyColors myColors = MyColors();
@@ -33,12 +32,12 @@ class _MainPageState extends State<MainPage> {
       myColors.block3,
     ];
     List<String> title1 = [
-      "Finanças",
+      "\t\t\t\t\t\tMindset Empreendedor",
       "UX/UI",
       "Pessoas",
       "Finanças",
       "Marketing",
-      "Tecnologia"
+      "Finanças"
     ];
     List<String> title2 = [
       "Business",
@@ -94,7 +93,7 @@ class _MainPageState extends State<MainPage> {
                 return Constants.choices.map((String choice) {
                   return PopupMenuItem<String>(
                     value: choice,
-                    child: Text(choice),
+                    child: Text(choice, textAlign: TextAlign.center,),
                   );
                 }).toList();
               },
@@ -113,7 +112,7 @@ class _MainPageState extends State<MainPage> {
                 child: FadeInAnimation(
                   child: MenuCard(
                       width: 160.0,
-                      height: 150.0,
+                      height: 172.0,
                       color: card_colors1[index],
                       color2: card_colors2[index],
                       text2: title2[index],
@@ -155,9 +154,6 @@ class _MainPageState extends State<MainPage> {
               content: InkWell(
                 child: new Text(
                     "Yves Alvim\nSamuel Santos\nAugusto Vesco\nCaio Pedroso\nGitRepo: https://github.com/gutovesco/Business-Monsters"),
-                onTap: () {
-                  launch('https://github.com/gutovesco/Business-Monsters');
-                },
               ),
               //new Text(),
               actions: <Widget>[
