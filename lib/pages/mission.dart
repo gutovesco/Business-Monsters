@@ -108,7 +108,8 @@ class _MissionState extends State<Mission> {
                                 "Video: Descobrindo o minimo produto viável",
                                 xpDesc[index],
                                 titleText[index],
-                                "assets/playbutton.png", 0),
+                                "assets/playbutton.png",
+                                0),
                             umContainer("Texto complementar", xpDesc[index],
                                 titleText[index], "assets/book.png", 1),
                             umContainer("Desafio", xpDesc[index],
@@ -151,19 +152,19 @@ class _MissionState extends State<Mission> {
     );
   }
 
-
   //conteudo da pagina onde tem as o card com o video, conteudo e desafio
   Widget umContainer(String text, String xp, String title, String img, int id) {
     return GestureDetector(
       onTap: () => {
-        if(id == 0){
-          FlutterYoutube.playYoutubeVideoByUrl(
-          apiKey: KEY, videoUrl: LINK, autoPlay: true, fullScreen: true)
-        }else if(id == 1){
-          print("texto complementar")
-        }else if(id == 2){
-          print("Desafio")
-        }
+        if (id == 0)
+          {
+            FlutterYoutube.playYoutubeVideoByUrl(
+                apiKey: KEY, videoUrl: LINK, autoPlay: true, fullScreen: true)
+          }
+        else if (id == 1)
+          {print("texto complementar")}
+        else if (id == 2)
+          {print("Desafio")}
       },
       child: Container(
           decoration: BoxDecoration(
@@ -202,25 +203,25 @@ Widget footer() {
   return GestureDetector(
     onTap: () => print("Enviar"),
     child: Container(
-    margin: EdgeInsets.fromLTRB(0, 15, 0, 5),
-    width: 390,
-    child: Card(
-      color: myColors.palletePink,
-      shape: RoundedRectangleBorder(
-        borderRadius: BorderRadius.circular(50.0),
-      ),
-      child: Column(
-        children: <Widget>[
-          Container(
-            margin: EdgeInsets.all(12),
-            child: Text(
-              "Concluir",
-              style: TextStyle(fontSize: 24, color: Colors.white),
+      margin: EdgeInsets.fromLTRB(0, 15, 0, 5),
+      width: 390,
+      child: Card(
+        color: myColors.palletePink,
+        shape: RoundedRectangleBorder(
+          borderRadius: BorderRadius.circular(50.0),
+        ),
+        child: Column(
+          children: <Widget>[
+            Container(
+              margin: EdgeInsets.all(12),
+              child: Text(
+                "Concluir",
+                style: TextStyle(fontSize: 24, color: Colors.white),
+              ),
             ),
-          ),
-        ],
+          ],
+        ),
       ),
     ),
-  ),
   );
 }
