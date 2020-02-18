@@ -1,5 +1,4 @@
 import 'package:Business_Monsters/pages/content_page.dart';
-import 'package:Business_Monsters/pages/quiz0.dart';
 import 'package:flutter/material.dart';
 import 'package:clay_containers/clay_containers.dart';
 
@@ -50,7 +49,7 @@ class MenuCard extends StatelessWidget {
               Navigator.push(
                   context,
                   new MaterialPageRoute(
-                      builder: (BuildContext context) => new Quiz1()));
+                      builder: (BuildContext context) => new ContentPage()));
             },
             child: ClayContainer(
               color: color,

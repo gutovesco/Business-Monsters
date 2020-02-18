@@ -20,7 +20,7 @@ class _BenefitsPage extends State<BenefitsPage> {
     ScreenUtil.init(context,
         width: 1080, height: 1860, allowFontScaling: false);
     return Scaffold(
-        backgroundColor: Color(0xFFF1F3F6),
+        backgroundColor: Colors.white,
         body: SafeArea(
           child: SingleChildScrollView(
             child: Container(
@@ -38,9 +38,28 @@ class _BenefitsPage extends State<BenefitsPage> {
                         textAlign: TextAlign.center,
                         style: TextStyle(
                           fontFamily: 'LuckiestGuy',
-                            color: Colors.black,
-                            fontSize: 26,
-                            fontWeight: FontWeight.bold),
+                          color: palleteMediumPink,
+                          fontSize: 36,
+                          fontWeight: FontWeight.bold,
+                          shadows: [
+                            Shadow( // bottomLeft
+                              offset: Offset(-2.5, -2.5),
+                              color: Colors.black,
+                            ),
+                            Shadow( // bottomRight
+                                offset: Offset(-2.5, -2.5),
+                                color: Colors.black,
+                            ),
+                            Shadow( // topRight
+                                offset: Offset(2.5, 2.5),
+                                color: Colors.black,
+                            ),
+                            Shadow( // topLeft
+                                offset: Offset(-2.5, 2.5),
+                                color: Colors.black,
+                            ),
+                          ],
+                        ),
                       ),
                     ),
                     SizedBox(
@@ -57,7 +76,7 @@ class _BenefitsPage extends State<BenefitsPage> {
                                 color: palleteMediumPink,
                                 width: 2),
                           ),
-                          labelText: "Buscar",
+                          labelText: "Pesquisar",
                           labelStyle: TextStyle(
                             fontFamily: 'LuckiestGuy',
                               color: palleteMediumPink,
@@ -78,11 +97,43 @@ class _BenefitsPage extends State<BenefitsPage> {
                           )
                       ],
                     ),
-                   
-                        SizedBox(height: 50),
+                    SizedBox(height: 20,),
+                      Row(
+                        children: <Widget>[
+                          Text(
+                            "Benefícios",
+                            textAlign: TextAlign.center,
+                            style: TextStyle(
+                              fontFamily: 'LuckiestGuy',
+                              color: palleteMediumPink,
+                              fontSize: 26,
+                              fontWeight: FontWeight.bold,
+                              shadows: [
+                                Shadow( // bottomLeft
+                                  offset: Offset(-2.5, -2.5),
+                                  color: Colors.white,
+                                ),
+                                Shadow( // bottomRight
+                                    offset: Offset(-2.5, -2.5),
+                                    color: Colors.white
+                                ),
+                                Shadow( // topRight
+                                    offset: Offset(2.5, 2.5),
+                                    color: Colors.white
+                                ),
+                                Shadow( // topLeft
+                                    offset: Offset(-2.5, 2.5),
+                                    color: Colors.white
+                                ),
+                              ],
+                            ),
+                          ),
+                        ],
+                      ),
                       Divider(thickness: .5, color: Colors.black),
 
                         Container(
+                            color: Color.fromRGBO(243, 245, 248, 1),
                             child: Row(
                               children: <Widget>[
                                 Expanded(
@@ -120,7 +171,7 @@ class _BenefitsPage extends State<BenefitsPage> {
                            padding: EdgeInsets.fromLTRB(0, 0, 10, 0 ),
                           child:
                           FlatButton(
-                          color: palleteMediumPink,
+                          color: palletePink,
                           onPressed: () {}, 
                           child: Text(
                             'Comprar \n 500 XP',
@@ -136,6 +187,7 @@ class _BenefitsPage extends State<BenefitsPage> {
                         SizedBox(height: 20),
                         
                         Container(
+                            color: Color.fromRGBO(243, 245, 248, 1),
                             child: Row(
                               children: <Widget>[
                                 Expanded(
@@ -173,7 +225,7 @@ class _BenefitsPage extends State<BenefitsPage> {
                            padding: EdgeInsets.fromLTRB(0, 0, 10, 0 ),
                           child:
                           FlatButton(
-                          color: palleteMediumPink,
+                          color: palletePink,
                           onPressed: () {}, 
                           child: Text(
                             'Comprar \n 600 XP',
@@ -189,6 +241,7 @@ class _BenefitsPage extends State<BenefitsPage> {
                         SizedBox(height: 20),
 
                        Container(
+                           color: Color.fromRGBO(243, 245, 248, 1),
                             child: Row(
                               children: <Widget>[
                                 Expanded(
@@ -226,7 +279,7 @@ class _BenefitsPage extends State<BenefitsPage> {
                            padding: EdgeInsets.fromLTRB(0, 0, 20, 0 ),
                           child:
                           FlatButton(
-                          color: palleteMediumPink,
+                          color: palletePink,
                           onPressed: () {}, 
                           child: Text(
                             'Comprar \n 800 XP',

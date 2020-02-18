@@ -18,6 +18,7 @@ dependencies:
   flutter_staggered_animations: "^0.1.2"
   curved_navigation_bar:
   clay_containers:
+  url_launcher: ^3.0.3
   custom_switch: 
     git: 
       url: https://github.com/MarcioQuimbundo/custom_switch_flutter.git

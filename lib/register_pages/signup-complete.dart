@@ -1,6 +1,6 @@
-import 'package:Business_Monsters/home.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
+import 'package:Business_Monsters/pages/quiz0.dart';
 
 Color palleteBlue = Color(0xff010a43);
 Color palleteLightPink = Color(0xffffc2c2);
@@ -32,27 +32,18 @@ class _SignupCompleteState extends State<SignupComplete> {
                         crossAxisAlignment: CrossAxisAlignment.start,
                         children: <Widget>[
                           SizedBox(
-                            height: ScreenUtil().setHeight(30),
+                            height: ScreenUtil().setHeight(100),
                           ),
                           Text(
-                            "Business Monsters",
+                            "Bem vinda, Joana",
                             textAlign: TextAlign.left,
                             style: TextStyle(
                               fontFamily: 'LuckiestGuy',
                                 color: palleteMediumPink,
-                                fontSize: 20,
+                                fontSize: 32,
                                 fontWeight: FontWeight.bold),
                           ),
                           SizedBox(height: 25),
-                          Center(
-                            child: Text('Uhulll!!',
-                                textAlign: TextAlign.center,
-                                style: TextStyle(
-                                  fontFamily: 'LuckiestGuy',
-                                  fontSize: 26,
-                                  color: Colors.black,
-                                )),
-                          ),
                           Container(
                             constraints: BoxConstraints.expand(
                               height: 300.0,
@@ -68,7 +59,7 @@ class _SignupCompleteState extends State<SignupComplete> {
                           SizedBox(height: 15),
                           Center(
                             child: Text(
-                                'Temos um novo monstrinho empreendedor!\nVamos torná-lo gigante!',
+                                'Temos um novo monstrinho empreendedor!',
                                 textAlign: TextAlign.center,
                                 style: TextStyle(
                                   fontFamily: 'LuckiestGuy',
@@ -79,11 +70,11 @@ class _SignupCompleteState extends State<SignupComplete> {
                           SizedBox(height: 25),
                           Center(
                             child: Text(
-                                'A cada missão concluída, você receberá algumas moedas.\n Resgate benefícios incríveis com elas!',
+                                'A cada missão concluída, você receberá pontos de experiência.\nResgate prêmios incríveis com XP!',
                                 textAlign: TextAlign.center,
                                 style: TextStyle(
                                   fontFamily: 'LuckiestGuy',
-                                  fontSize: 20,
+                                  fontSize: 18,
                                   color: Colors.grey[500],
                                 )),
                           ),
@@ -93,7 +84,7 @@ class _SignupCompleteState extends State<SignupComplete> {
                         Navigator.push(
                             context,
                             new MaterialPageRoute(
-                                builder: (BuildContext context) => Home()));
+                                builder: (BuildContext context) =>  new Quiz1()));
                       },
                       child: Container(
                         width: double.infinity,
@@ -106,7 +97,7 @@ class _SignupCompleteState extends State<SignupComplete> {
                              gradient: LinearGradient(
             colors: [palletePink, palleteMediumPink]),),
                         child: Text(
-                          "Submeter",
+                          "Vamos Lá!",
                           style: TextStyle(
                             fontFamily: 'LuckiestGuy',
                               color: Colors.white,

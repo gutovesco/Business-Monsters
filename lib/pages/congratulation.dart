@@ -32,15 +32,47 @@ class _CongratulationsState extends State<Congratulations> {
                           SizedBox(
                             height: ScreenUtil().setHeight(80),
                           ),
-                           Center(
-                            child: Text(
-                                'Você acaba de completar a missão 0! Continue se esforçando!',
-                                textAlign: TextAlign.center,
-                                style: TextStyle(
-                                  fontSize: 20,
-                                  color: palleteBlue,
-                                )),
+                          Container(
+                              padding: EdgeInsets.fromLTRB(0, 0, 50, 0 ),
+                              child: Row(
+                                children: <Widget>[
+                                  Expanded(
+                                    child: Column (
+                                      crossAxisAlignment: CrossAxisAlignment.center,
+                                      children: <Widget>[
+                                        Container(
+                                          constraints: BoxConstraints.expand(
+                                            height: 100.0,
+                                          ),
+                                          decoration: BoxDecoration(
+                                              image: new DecorationImage(
+                                                alignment: Alignment.centerRight,
+                                                image: new ExactAssetImage(
+                                                    'assets/party.png',
+                                                    scale: 1.5
+                                                ),
+                                              )
+                                          ),
+                                        ),
+                                      ],
+                                    ),
+                                  ),
+                                  Center(
+                                    child: Text('PARABÉNS!',
+                                      textAlign: TextAlign.left,
+                                      style: TextStyle(
+                                          color: Colors.pink,
+                                          fontFamily: 'LuckiestGuy',
+                                          fontSize: 40
+                                      ),
+                                    ),
+                                  ),
+
+                                ],
+                              )
                           ),
+
+
                           SizedBox(height: 25),
                           Container(
                             child: Row(
@@ -67,10 +99,10 @@ class _CongratulationsState extends State<Congratulations> {
                                   ),
                                   new Padding(
                                     padding: EdgeInsets.fromLTRB(0, 0, 50, 0 ),
-                                     child: Text('+50 xp',
+                                     child: Text('+50 XP',
                             textAlign: TextAlign.left,
                             style: TextStyle(
-                              color: Colors.green,
+                              color: Colors.orange,
                               fontSize: 40
                             ),
                             ),
@@ -79,41 +111,14 @@ class _CongratulationsState extends State<Congratulations> {
                             )
                           ),
 
-                          Container(
-                            padding: EdgeInsets.fromLTRB(0, 0, 50, 0 ),
-                            child: Row(
-                              children: <Widget>[
-                                Expanded(
-                                  child: Column (
-                                    crossAxisAlignment: CrossAxisAlignment.center,
-                                    children: <Widget>[
-                                      Container(
-                                        constraints: BoxConstraints.expand(
-                              height: 100.0,
-                            ),
-                                        decoration: BoxDecoration(
-                                image: new DecorationImage(
-                                  alignment: Alignment.centerRight,
-                              image: new ExactAssetImage(
-                                'assets/party.png',
-                                scale: 1.5
-                              ),
-                                      )
-                                        ),
-                                        ),
-                                        ],
-                                  ),
-                                  ),
-                           Text('PARABÉNS!',
-                            textAlign: TextAlign.left,
-                            style: TextStyle(
-                              color: Colors.green,
-                              fontSize: 40
-                            ),
-                            ),
-                              ],
-                            )
-                          ),
+                          Text(
+                              'Você acaba de completar sua primeira missão!\nSeu conteúdo de aprendizado foi adaptado para atender seu perfil atual.',
+                              textAlign: TextAlign.center,
+                              style: TextStyle(
+                                fontSize: 20,
+                                color: palleteMediumPink,
+                                fontFamily: 'LuckiestGuy',
+                              )),
 
                           SizedBox(height: 20),
                           GestureDetector(
@@ -135,10 +140,10 @@ class _CongratulationsState extends State<Congratulations> {
                            colors: [palletePink, palleteMediumPink]),
                             ),
                         child: Text(
-                          "Voltar à trilha",
+                          "IR PARA CONTEÚDO",
                           style: TextStyle(
                               color: Colors.white,
-                              fontSize: 16),
+                              fontSize: 16, fontFamily: 'LuckiestGuy',),
                         ),
                       ),
                     ),

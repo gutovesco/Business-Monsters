@@ -12,11 +12,11 @@ class ContentPage extends StatefulWidget {
 }
 
 List<String> titleText = [
-  "O que é UX/UI?",
-  "Qual a importância de UX/UI?",
+  "O que é MVP?",
+  "Qual a importância de um plano de negócios?",
   "Conceitos básicos",
   "Aprendendo com exemplos",
-  "Criando seu primeiro projeto",
+  "Idealizando seu MVP",
   "Ferramentas úteis",
   "Como engajar o usúario",
 ];
@@ -47,7 +47,7 @@ class _ContentPageState extends State<ContentPage> {
       appBar: GradientAppBar(
         title: Row(
           children: [
-            Text("Trilha UX/UI"),
+            Text("Trilha Business"),
           ],
         ),
 //        centerTitle: true,

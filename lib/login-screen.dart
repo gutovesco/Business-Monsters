@@ -43,8 +43,26 @@ class _LoginScreenState extends State<LoginScreen> {
                         style: TextStyle(
                           fontFamily: 'LuckiestGuy',
                             color: palleteMediumPink,
-                            fontSize: 26,
+                            fontSize: 36,
                             fontWeight: FontWeight.bold,
+                            shadows: [
+                            Shadow( // bottomLeft
+                            offset: Offset(-2.5, -2.5),
+                        color: Colors.white,
+                      ),
+                      Shadow( // bottomRight
+                          offset: Offset(-2.5, -2.5),
+                          color: Colors.white
+                      ),
+                      Shadow( // topRight
+                          offset: Offset(2.5, 2.5),
+                          color: Colors.white
+                      ),
+                      Shadow( // topLeft
+                          offset: Offset(-2.5, 2.5),
+                          color: Colors.white
+                      ),
+                      ],
                         ),
                       ),
                     ),
@@ -70,28 +88,6 @@ class _LoginScreenState extends State<LoginScreen> {
                                 fontFamily: 'LuckiestGuy',
                                   color: palleteMediumPink,
                                   fontSize: 14)),
-                        ),
-                        Positioned(
-                          right: 1,
-                          bottom: 8,
-                          child: Container(
-                            height: 30,
-                            width: 30,
-                            decoration: BoxDecoration(
-                                color: Color(0xFFF1F3F6),
-                                borderRadius:
-                                    BorderRadius.all(Radius.circular(50)),
-                                boxShadow: [
-                                  BoxShadow(
-                                      offset: Offset(5, 5),
-                                      color: Color(0xFF4D70A6).withOpacity(0.2),
-                                      blurRadius: 16),
-                                  BoxShadow(
-                                      offset: Offset(-10, -10),
-                                      color: Color.fromARGB(170, 255, 255, 255),
-                                      blurRadius: 10),
-                                ]),
-                          ),
                         ),
                       ],
                     ),

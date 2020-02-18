@@ -50,7 +50,7 @@ class _MissionState extends State<Mission> {
       appBar: GradientAppBar(
         title: Row(
           children: [
-            Text("Trilha UX/UI"),
+            Text("Trilha Business"),
           ],
         ),
 //        centerTitle: true,
@@ -105,7 +105,7 @@ class _MissionState extends State<Mission> {
                           children: <Widget>[
                             head(),
                             umContainer(
-                                "Video: Descobrindo o minimo produto viável",
+                                "Video: Descobrindo o mínimo produto viável",
                                 xpDesc[index],
                                 titleText[index],
                                 "assets/playbutton.png",
@@ -188,7 +188,7 @@ class _MissionState extends State<Mission> {
                   child: Text(
                     text,
                     textAlign: TextAlign.center,
-                    style: TextStyle(color: Colors.white, fontSize: 14),
+                    style: TextStyle(color: myColors.palleteMediumPink, fontSize: 14, fontFamily: 'LuckiestGuy'),
                   ),
                 ),
               ),

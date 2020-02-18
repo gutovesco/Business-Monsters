@@ -3,6 +3,7 @@ import 'package:Business_Monsters/utils/colors.dart';
 import 'package:flutter_staggered_animations/flutter_staggered_animations.dart';
 import 'package:Business_Monsters/cards/menu_card.dart';
 import 'package:gradient_app_bar/gradient_app_bar.dart';
+import 'package:url_launcher/url_launcher.dart';
 import 'dart:io';
 
 MyColors myColors = MyColors();
@@ -15,9 +16,8 @@ class MainPage extends StatefulWidget {
 class _MainPageState extends State<MainPage> {
   @override
   Widget build(BuildContext context) {
-
     List<Color> card_colors1 = [
-      myColors.block1,
+      myColors.palleteBlue,
       myColors.block2,
       myColors.block3,
       myColors.block4,
@@ -33,15 +33,15 @@ class _MainPageState extends State<MainPage> {
       myColors.block3,
     ];
     List<String> title1 = [
-      "Missão 0",
+      "Finanças",
       "UX/UI",
-      "Business",
+      "Pessoas",
       "Finanças",
       "Marketing",
       "Tecnologia"
     ];
     List<String> title2 = [
-      "Finanças",
+      "Business",
       "Marketing",
       "Tecnologia",
       "Missão 0",
@@ -49,7 +49,7 @@ class _MainPageState extends State<MainPage> {
       "Business"
     ];
 
-    List<String> desc = ["Teste Inicial", "0/53", "0/42", "0/30", "0/61", "0/34"];
+    List<String> desc = ["0/22", "0/53", "0/42", "0/30", "0/61", "0/34"];
     List<String> desc2 = ["0/30", "0/61", "0/34", "0/20", "0/53", "0/42"];
 
     return Scaffold(
@@ -69,21 +69,24 @@ class _MainPageState extends State<MainPage> {
                   child: Row(
                     children: <Widget>[
                       Text('Joana Souza'),
-                      SizedBox(width: 5,),
+                      SizedBox(
+                        width: 5,
+                      ),
                       Padding(
                         padding: EdgeInsets.only(top: 5.0),
                         child: Text(
                           "XP: 125",
-                          style: TextStyle(fontSize: 12.0, color: Colors.limeAccent),
-                        ) ,
+                          style: TextStyle(
+                              fontSize: 12.0, color: Colors.limeAccent),
+                        ),
                       )
-
                     ],
                   ))
             ],
           ),
 //        centerTitle: true,
-          gradient: LinearGradient(colors: [myColors.palletePink, myColors.palleteMediumPink]),
+          gradient: LinearGradient(
+              colors: [myColors.palletePink, myColors.palleteMediumPink]),
           actions: <Widget>[
             PopupMenuButton<String>(
               onSelected: choiceAction,
@@ -148,8 +151,15 @@ class _MainPageState extends State<MainPage> {
           context: context,
           builder: (BuildContext context) {
             return AlertDialog(
-              title: new Text("Equipe"),
-              content: new Text("Yves\nSamuel\nAugusto\nCaio\nGitRepo:"),
+              title: new Text("Equipe 24"),
+              content: InkWell(
+                child: new Text(
+                    "Yves Alvim\nSamuel Santos\nAugusto Vesco\nCaio Pedroso\nGitRepo: https://github.com/gutovesco/Business-Monsters"),
+                onTap: () {
+                  launch('https://github.com/gutovesco/Business-Monsters');
+                },
+              ),
+              //new Text(),
               actions: <Widget>[
                 // usually buttons at the bottom of the dialog
                 new FlatButton(
