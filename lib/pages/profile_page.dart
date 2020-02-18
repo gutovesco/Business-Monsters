@@ -1,3 +1,4 @@
+import 'package:Business_Monsters/pages/content_page.dart';
 import 'package:flutter/material.dart';
 
 class ProfilePage extends StatefulWidget {
@@ -9,6 +10,7 @@ class _ProfilePageState extends State<ProfilePage> {
   @override
   Widget build(BuildContext context) {
     return Container(
+      color: myColors.palleteLightPink,
       height: MediaQuery.of(context).size.height,
       width: double.infinity,
       child: Stack(
