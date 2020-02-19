@@ -23,9 +23,9 @@ selecionado ao mesmo passo em que fazemos o seu negócio ganhar asas através do
 
 ## Telas
 
+![alt text](https://github.com/gutovesco/Business-Monsters/blob/tablets/images/menu.png)
+![alt text](https://github.com/gutovesco/Business-Monsters/blob/tablets/images/phases.png)
 ![alt text](https://github.com/gutovesco/Business-Monsters/blob/tablets/images/content.png)
-![alt text]()
-![alt text]()
-![alt text]()
-![alt text]()
+![alt text](https://github.com/gutovesco/Business-Monsters/blob/tablets/images/profile.png)
+![alt text](https://github.com/gutovesco/Business-Monsters/blob/tablets/images/rewards.png)
 
