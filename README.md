@@ -5,8 +5,10 @@ Plataforma gamificada para formar e capacitar novos empreendedores.
 ## Contexto
 
 Download apk:
-[Versão otimizada para smartphones]()
-[Versão otimizada pata tablets]()
+
+[Versão otimizada para smartphones](https://github.com/gutovesco/Business-Monsters/blob/tablets/apks/bm_common.apk)
+
+[Versão otimizada pata tablets](https://github.com/gutovesco/Business-Monsters/blob/tablets/apks/bm_tablet.apk)
 
 Projeto realizado para o MegaHack 2020 da Shawee - Desafio SEBRAE.
 
