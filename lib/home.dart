@@ -1,80 +1,101 @@
-
+import 'package:Business_Monsters/pages/rewards_page.dart';
 import 'package:flutter/material.dart';
+import 'package:Business_Monsters/pages/profile_page.dart';
+import 'package:Business_Monsters/pages/home_page.dart';
+import 'package:curved_navigation_bar/curved_navigation_bar.dart';
 
-class Home extends StatelessWidget {
+class Home extends StatefulWidget {
+  @override
+  _Home createState() => _Home();
+}
+
+class _Home extends State<Home> {
+  int _page = 1;
+  final ProfilePage _profile = new ProfilePage();
+  final BenefitsPage _rewards = new BenefitsPage();
+  final MainPage _main = MainPage();
+
+  Widget _showPage = new MainPage();
+
+  Widget _pageChooser(int page) {
+    switch (page) {
+      case 0:
+        return _profile;
+        break;
+      case 1:
+        return _main;
+        break;
+      case 2:
+        return _rewards;
+        break;
+      default:
+        return new Container(
+          child: Center(
+            child: Text('No Page Found!'),
+          ),
+        );
+    }
+  }
+
   @override
   Widget build(BuildContext context) {
-    return Scaffold(
-          body: Container(
-            child: SingleChildScrollView(
-      child: Column(children: <Widget>[
-        Container(
-          width: MediaQuery.of(context).size.width,
-          height: MediaQuery.of(context).size.height / 5.5,
-          child: Column(
+    return new Scaffold(
+      body: Container(
+        child: _showPage,
+      ),
+      bottomNavigationBar: CurvedNavigationBar(
+        height: 50.0,
+        index: _page,
+        color: myColors.bars,
+        backgroundColor: Colors.white,
+        animationCurve: Curves.linearToEaseOut,
+        items: <Widget>[
+          Column(
             mainAxisAlignment: MainAxisAlignment.center,
             children: <Widget>[
-              Spacer(),
-              SizedBox(height: 30),
-              Spacer(),
-              Center(
-                  child: Text(
-                    'EasyInvest',
-                    textAlign: TextAlign.center,
-                    style: TextStyle(
-                        color: Colors.black,
-                        fontSize: 26,
-                        fontFamily: "Quicksand-Bold"),
-                  ),
+              Icon(
+                Icons.person,
+                color: Colors.white,
+              ),
+              Text(
+                "Perfil",
+                style: TextStyle(color: Colors.white, fontSize: 10, ),
               ),
             ],
           ),
-        ),
-        SizedBox(height: 150),
-
-        Container(
-          child: Align(
-            alignment: Alignment.center,
-            child: Text('Qual o nome da sua empresa?'),
-          ),
-        ),
-
-        Container(
-                width: MediaQuery.of(context).size.width / 1.2,
-                height: 45,
-                margin: EdgeInsets.only(top: 12),
-                padding:
-                    EdgeInsets.only(top: 4, left: 16, right: 16, bottom: 4),
-                decoration: BoxDecoration(
-                    borderRadius: BorderRadius.all(Radius.circular(50)),
-                    color: Colors.white,
-                    boxShadow: [
-                      BoxShadow(color: Colors.black12, blurRadius: 5)
-                    ]),
-                child: TextField(
-                  keyboardType: TextInputType.emailAddress,
-                  decoration: InputDecoration(
-                    border: InputBorder.none,
-                    hintText: 'Ex: BadRuim',
-                    labelStyle: TextStyle(
-                      fontFamily: "Quicksand",
-                    ),
-                  ),
-                ),
+          Column(
+            mainAxisAlignment: MainAxisAlignment.center,
+            children: <Widget>[
+              Icon(
+                Icons.home,
+                color: Colors.white,
               ),
-
-               FlatButton(
-                 hoverColor: Colors.amber,
-                 color: Colors.amberAccent,
-                        child: Text(
-                          'Próximo'.toUpperCase(),
-                          style: TextStyle(
-                              color: Colors.black,
-                              fontWeight: FontWeight.bold,
-                              fontFamily: "Quicksand"),
-                        ),
-                        onPressed: () {
-                          Navigator.pop(context);
-                        })
-
-            ]))));}}
+              Text(
+                "Material",
+                style: TextStyle(color: Colors.white, fontSize: 10, ),
+              ),
+            ],
+          ),
+          Column(
+            mainAxisAlignment: MainAxisAlignment.center,
+            children: <Widget>[
+              Icon(
+                Icons.attach_money,
+                color: Colors.white,
+              ),
+              Text(
+                "Prêmios",
+                style: TextStyle(color: Colors.white, fontSize: 10, ),
+              ),
+            ],
+          ),
+        ],
+        onTap: (int tappedIndex) {
+          setState(() {
+            _showPage = _pageChooser(tappedIndex);
+          });
+        },
+      ),
+    );
+  }
+}
