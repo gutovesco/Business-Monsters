@@ -13,7 +13,7 @@ Download apk:
 
 Projeto realizado para o MegaHack 2020 da Shawee - Desafio SEBRAE.
 
-A maioria das novas empresas formadas no Brasil fecha antes de completarem 2 anos de atividade.  
+A maioria das novas empresas formadas no Brasil fecham antes de completarem 2 anos de atividade.  
 Comprovadamente, grande parte da razão dessa problemática é a falta de conhecimento por parte 
 do empreendedor, o qual não está devidamente preparado para todos os desafios de começar e gerir 
 um negócio próprio. Pensando nisso, desenvolvemos uma plataforma gamificada que aborda todos os 
