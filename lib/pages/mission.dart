@@ -2,7 +2,6 @@ import 'package:flutter/material.dart';
 import 'package:Business_Monsters/utils/colors.dart';
 import 'package:gradient_app_bar/gradient_app_bar.dart';
 import 'package:flutter_staggered_animations/flutter_staggered_animations.dart';
-import 'package:flutter_youtube/flutter_youtube.dart';
 
 MyColors myColors = MyColors();
 
@@ -158,8 +157,7 @@ class _MissionState extends State<Mission> {
       onTap: () => {
         if (id == 0)
           {
-            FlutterYoutube.playYoutubeVideoByUrl(
-                apiKey: KEY, videoUrl: LINK, autoPlay: true, fullScreen: true)
+            print('video')
           }
         else if (id == 1)
           {print("texto complementar")}
