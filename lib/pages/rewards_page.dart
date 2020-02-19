@@ -39,7 +39,7 @@ class _BenefitsPage extends State<BenefitsPage> {
                         style: TextStyle(
                           fontFamily: 'LuckiestGuy',
                           color: palleteMediumPink,
-                          fontSize: 36,
+                          fontSize: 54,
                           fontWeight: FontWeight.bold,
                           shadows: [
                             Shadow( // bottomLeft
@@ -110,20 +110,20 @@ class _BenefitsPage extends State<BenefitsPage> {
                               fontWeight: FontWeight.bold,
                               shadows: [
                                 Shadow( // bottomLeft
-                                  offset: Offset(-2.5, -2.5),
-                                  color: Colors.white,
+                                  offset: Offset(-1.5, -1.5),
+                                  color: Colors.black,
                                 ),
                                 Shadow( // bottomRight
-                                    offset: Offset(-2.5, -2.5),
-                                    color: Colors.white
+                                  offset: Offset(-1.5, -1.5),
+                                  color: Colors.black,
                                 ),
                                 Shadow( // topRight
-                                    offset: Offset(2.5, 2.5),
-                                    color: Colors.white
+                                  offset: Offset(1.5, 1.5),
+                                  color: palletePink,
                                 ),
                                 Shadow( // topLeft
-                                    offset: Offset(-2.5, 2.5),
-                                    color: Colors.white
+                                  offset: Offset(-1.5, 1.5),
+                                  color: palletePink,
                                 ),
                               ],
                             ),

@@ -3,7 +3,6 @@ import 'package:Business_Monsters/utils/colors.dart';
 import 'package:flutter_staggered_animations/flutter_staggered_animations.dart';
 import 'package:Business_Monsters/cards/menu_card.dart';
 import 'package:gradient_app_bar/gradient_app_bar.dart';
-import 'package:url_launcher/url_launcher.dart';
 import 'dart:io';
 
 MyColors myColors = MyColors();
@@ -33,7 +32,7 @@ class _MainPageState extends State<MainPage> {
       myColors.block3,
     ];
     List<String> title1 = [
-      "Finanças",
+      "Mindset",
       "UX/UI",
       "Pessoas",
       "Finanças",
@@ -107,13 +106,13 @@ class _MainPageState extends State<MainPage> {
           itemBuilder: (BuildContext context, int index) {
             return AnimationConfiguration.staggeredList(
               position: index,
-              duration: const Duration(milliseconds: 800),
+              duration: const Duration(milliseconds: 450),
               child: SlideAnimation(
                 verticalOffset: 50.0,
                 child: FadeInAnimation(
                   child: MenuCard(
-                      width: 160.0,
-                      height: 150.0,
+                      width: 240.0,
+                      height: 230.0,
                       color: card_colors1[index],
                       color2: card_colors2[index],
                       text2: title2[index],
@@ -156,7 +155,7 @@ class _MainPageState extends State<MainPage> {
                 child: new Text(
                     "Yves Alvim\nSamuel Santos\nAugusto Vesco\nCaio Pedroso\nGitRepo: https://github.com/gutovesco/Business-Monsters"),
                 onTap: () {
-                  launch('https://github.com/gutovesco/Business-Monsters');
+                  print('https://github.com/gutovesco/Business-Monsters');
                 },
               ),
               //new Text(),

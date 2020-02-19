@@ -2,7 +2,6 @@ import 'package:flutter/material.dart';
 import 'package:Business_Monsters/utils/colors.dart';
 import 'package:gradient_app_bar/gradient_app_bar.dart';
 import 'package:flutter_staggered_animations/flutter_staggered_animations.dart';
-import 'package:flutter_youtube/flutter_youtube.dart';
 
 MyColors myColors = MyColors();
 
@@ -15,7 +14,7 @@ class Mission extends StatefulWidget {
 }
 
 List<String> titleText = [
-  "ahhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhh",
+  "ah",
   "Qual a importância de UX/UI?",
   "Conceitos básicos",
   "Aprendendo com exemplos",
@@ -131,7 +130,7 @@ class _MissionState extends State<Mission> {
   Widget head() {
     return Container(
       margin: EdgeInsets.fromLTRB(0, 15, 0, 5),
-      width: 390,
+      width: 690,
       child: Card(
         color: myColors.palletePink,
         shape: RoundedRectangleBorder(
@@ -143,7 +142,7 @@ class _MissionState extends State<Mission> {
               margin: EdgeInsets.all(12),
               child: Text(
                 "Missão 1: O que é MVP",
-                style: TextStyle(fontSize: 24, color: Colors.white),
+                style: TextStyle(fontSize: 32, color: Colors.white, fontFamily: 'Squada One'),
               ),
             ),
           ],
@@ -158,8 +157,7 @@ class _MissionState extends State<Mission> {
       onTap: () => {
         if (id == 0)
           {
-            FlutterYoutube.playYoutubeVideoByUrl(
-                apiKey: KEY, videoUrl: LINK, autoPlay: true, fullScreen: true)
+            print('a'),
           }
         else if (id == 1)
           {print("texto complementar")}
@@ -178,17 +176,17 @@ class _MissionState extends State<Mission> {
               child: Column(
             children: <Widget>[
               CircleAvatar(
-                radius: 50,
+                radius: 71,
                 backgroundImage: AssetImage(img),
               ),
               Container(
-                margin: EdgeInsets.all(4),
-                width: 275,
+                margin: EdgeInsets.all(15),
+                width: 375,
                 child: Center(
                   child: Text(
                     text,
                     textAlign: TextAlign.center,
-                    style: TextStyle(color: myColors.palleteMediumPink, fontSize: 14, fontFamily: 'LuckiestGuy'),
+                    style: TextStyle(color: myColors.palleteMediumPink, fontSize: 24, fontFamily: 'LuckiestGuy'),
                   ),
                 ),
               ),
@@ -204,7 +202,7 @@ Widget footer() {
     onTap: () => print("Enviar"),
     child: Container(
       margin: EdgeInsets.fromLTRB(0, 15, 0, 5),
-      width: 390,
+      width: 690,
       child: Card(
         color: myColors.palletePink,
         shape: RoundedRectangleBorder(
@@ -216,7 +214,7 @@ Widget footer() {
               margin: EdgeInsets.all(12),
               child: Text(
                 "Concluir",
-                style: TextStyle(fontSize: 24, color: Colors.white),
+                style: TextStyle(fontSize: 32, color: Colors.white, fontFamily: 'Squada One'),
               ),
             ),
           ],

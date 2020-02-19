@@ -25,15 +25,15 @@ class _CongratulationsState extends State<Congratulations> {
             child: SingleChildScrollView(
                 child: Container(
                     margin: EdgeInsets.symmetric(
-                        horizontal: ScreenUtil().setWidth(100)),
+                        horizontal: ScreenUtil().setWidth(40)),
                     child: Column(
                         crossAxisAlignment: CrossAxisAlignment.start,
                         children: <Widget>[
                           SizedBox(
-                            height: ScreenUtil().setHeight(80),
+                            height: ScreenUtil().setHeight(100),
                           ),
                           Container(
-                              padding: EdgeInsets.fromLTRB(0, 0, 50, 0 ),
+                              padding: EdgeInsets.fromLTRB(0, 0, 130, 0 ),
                               child: Row(
                                 children: <Widget>[
                                   Expanded(
@@ -49,7 +49,7 @@ class _CongratulationsState extends State<Congratulations> {
                                                 alignment: Alignment.centerRight,
                                                 image: new ExactAssetImage(
                                                     'assets/party.png',
-                                                    scale: 1.5
+                                                    scale: 1.0
                                                 ),
                                               )
                                           ),
@@ -63,7 +63,7 @@ class _CongratulationsState extends State<Congratulations> {
                                       style: TextStyle(
                                           color: Colors.pink,
                                           fontFamily: 'LuckiestGuy',
-                                          fontSize: 40
+                                          fontSize: 56
                                       ),
                                     ),
                                   ),
@@ -82,15 +82,16 @@ class _CongratulationsState extends State<Congratulations> {
                                     crossAxisAlignment: CrossAxisAlignment.center,
                                     children: <Widget>[
                                       Container(
-                                        constraints: BoxConstraints.expand(
-                              height: 300.0,
-                            ),
+                                       child: Image(image: AssetImage(
+                                'assets/profile_pic.png',
+
+                            ),),
                                         decoration: BoxDecoration(
                                 image: new DecorationImage(
                                   alignment: Alignment.centerLeft,
                               image: new ExactAssetImage(
                                 'assets/profile_pic.png',
-                                scale: 1.5
+                                scale: 1.0
                               ),
                                       )
                                         ),
@@ -98,7 +99,7 @@ class _CongratulationsState extends State<Congratulations> {
                                   )
                                   ),
                                   new Padding(
-                                    padding: EdgeInsets.fromLTRB(0, 0, 50, 0 ),
+                                    padding: EdgeInsets.fromLTRB(0, 0, 90, 0 ),
                                      child: Text('+50 XP',
                             textAlign: TextAlign.left,
                             style: TextStyle(
@@ -110,17 +111,17 @@ class _CongratulationsState extends State<Congratulations> {
                               ],
                             )
                           ),
-
+                          SizedBox(height: 40),
                           Text(
                               'Você acaba de completar sua primeira missão!\nSeu conteúdo de aprendizado foi adaptado para atender seu perfil atual.',
                               textAlign: TextAlign.center,
                               style: TextStyle(
-                                fontSize: 20,
+                                fontSize: 26,
                                 color: palleteMediumPink,
                                 fontFamily: 'LuckiestGuy',
                               )),
 
-                          SizedBox(height: 20),
+                          SizedBox(height: 120),
                           GestureDetector(
                      onTap: () {
                         Navigator.push(

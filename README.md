@@ -1,16 +1,31 @@
-# test_project
+# business_monsters
 
-A new Flutter project.
+Plataforma gamificada para formar e capacitar novos empreendedores.
 
-## Getting Started
+## Contexto
 
-This project is a starting point for a Flutter application.
+Download apk:
+[Versão otimizada para smartphones]()
+[Versão otimizada pata tablets]()
 
-A few resources to get you started if this is your first Flutter project:
+Projeto realizado para o MegaHack 2020 da Shawee - Desafio SEBRAE.
 
-- [Lab: Write your first Flutter app](https://flutter.dev/docs/get-started/codelab)
-- [Cookbook: Useful Flutter samples](https://flutter.dev/docs/cookbook)
+A maioria das novas empresas formadas no Brasil fecha antes de completarem 2 anos de atividade.  
+Comprovadamente, grande parte da razão dessa problemática é a falta de conhecimento por parte 
+do empreendedor, o qual não está devidamente preparado para todos os desafios de começar e gerir 
+um negócio próprio. Pensando nisso, desenvolvemos uma plataforma gamificada que aborda todos os 
+principais tópicos que o empreendedor precisa dominar, de forma que o conteúdo absorvido resulta em pontos 
+que são convertidos em prêmios, através do resgate de benefícios de empresas parceiras à nossa plataforma.
+Dessa forma, procuramos ajudar novos empreendedores a continuarem aprendendo com nosso material cuidadosamente
+selecionado ao mesmo passo em que fazemos o seu negócio ganhar asas através dos benefícios propostos.
 
-For help getting started with Flutter, view our
-[online documentation](https://flutter.dev/docs), which offers tutorials,
-samples, guidance on mobile development, and a full API reference.
+- [Página na Product Hunt]() 
+
+## Telas
+
+![alt text]()
+![alt text]()
+![alt text]()
+![alt text]()
+![alt text]()
+

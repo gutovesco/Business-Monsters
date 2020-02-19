@@ -44,7 +44,7 @@ class _Home extends State<Home> {
         child: _showPage,
       ),
       bottomNavigationBar: CurvedNavigationBar(
-        height: 50.0,
+        height: 65.0,
         index: _page,
         color: myColors.bars,
         backgroundColor: Colors.white,

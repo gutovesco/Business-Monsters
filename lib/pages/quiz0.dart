@@ -108,24 +108,24 @@ class Quiz1State extends State<Quiz1> {
                       textAlign: TextAlign.center,
                       style: new TextStyle(
                           color: palleteBlue,
-                          fontSize: 22.0,
+                          fontSize: 36.0,
                           fontFamily: 'LuckiestGuy'),
                     ),
                   ),
                 ),
-                SizedBox(height: 10),
+                SizedBox(height: 20),
                 Center(
                   child: new Text(
                     quiz.questions[questionNumber],
                     textAlign: TextAlign.center,
                     style: new TextStyle(
-                      color: palleteBlue,
-                      fontSize: 20.0,
+                      color: palleteLightPink,
+                      fontSize: 32.0,
                       fontFamily: 'LuckiestGuy',
                     ),
                   ),
                 ),
-                SizedBox(height: 20),
+                SizedBox(height: 100),
                 new Column(
                   mainAxisAlignment: MainAxisAlignment.spaceEvenly,
                   children: <Widget>[
@@ -143,8 +143,8 @@ class Quiz1State extends State<Quiz1> {
                         },
                         child: Container(
                           padding: EdgeInsets.fromLTRB(0, 20, 0, 0),
-                          width: 350,
-                          height: 80,
+                          width: 550,
+                          height: 120,
                           decoration: BoxDecoration(
                             borderRadius: BorderRadius.all(Radius.circular(10)),
                             color: palletePink,
@@ -154,11 +154,11 @@ class Quiz1State extends State<Quiz1> {
                             textAlign: TextAlign.center,
                             style: TextStyle(
                                 color: Colors.white,
-                                fontSize: 17.5,
+                                fontSize: 28,
                                 fontFamily: 'Squada One'),
                           ),
                         )),
-                    SizedBox(height: 10),
+                    SizedBox(height: 20),
 
                     //button 2
                     GestureDetector(
@@ -174,8 +174,8 @@ class Quiz1State extends State<Quiz1> {
                         },
                         child: Container(
                           padding: EdgeInsets.fromLTRB(0, 20, 0, 0),
-                          width: 350,
-                          height: 80,
+                          width: 550,
+                          height: 120,
                           decoration: BoxDecoration(
                             borderRadius: BorderRadius.all(Radius.circular(10)),
                             color: palletePink,
@@ -185,13 +185,13 @@ class Quiz1State extends State<Quiz1> {
                             textAlign: TextAlign.center,
                             style: TextStyle(
                                 color: Colors.white,
-                                fontSize: 16,
+                                fontSize: 28,
                                 fontFamily: 'Squada One'),
                           ),
                         )),
                   ],
                 ),
-                SizedBox(height: 10),
+                SizedBox(height: 20),
                 new Column(
                   mainAxisAlignment: MainAxisAlignment.spaceEvenly,
                   children: <Widget>[
@@ -209,8 +209,8 @@ class Quiz1State extends State<Quiz1> {
                         },
                         child: Container(
                           padding: EdgeInsets.fromLTRB(0, 20, 0, 0),
-                          width: 350,
-                          height: 100,
+                          width: 550,
+                          height: 120,
                           decoration: BoxDecoration(
                             borderRadius: BorderRadius.all(Radius.circular(10)),
                             color: palletePink,
@@ -220,12 +220,12 @@ class Quiz1State extends State<Quiz1> {
                             textAlign: TextAlign.center,
                             style: TextStyle(
                                 color: Colors.white,
-                                fontSize: 16,
+                                fontSize: 28,
                                 fontFamily: 'Squada One'),
                           ),
                         )),
 
-                    SizedBox(height: 10),
+                    SizedBox(height: 20),
 
                     //button 4
                     GestureDetector(
@@ -241,8 +241,8 @@ class Quiz1State extends State<Quiz1> {
                         },
                         child: Container(
                           padding: EdgeInsets.fromLTRB(0, 20, 0, 0),
-                          width: 350,
-                          height: 90,
+                          width: 550,
+                          height: 120,
                           decoration: BoxDecoration(
                             borderRadius: BorderRadius.all(Radius.circular(10)),
                             color: palletePink,
@@ -252,7 +252,7 @@ class Quiz1State extends State<Quiz1> {
                             textAlign: TextAlign.center,
                             style: TextStyle(
                                 color: Colors.white,
-                                fontSize: 16,
+                                fontSize: 28,
                                 fontFamily: 'Squada One'),
                           ),
                         )),
@@ -282,7 +282,7 @@ class Summary extends StatelessWidget {
             children: <Widget>[
               new Text(
                 "Você acertou: $score",
-                style: new TextStyle(fontSize: 35.0),
+                style: new TextStyle(fontFamily: 'LuckiestGuy', fontSize: 42.0),
               ),
               GestureDetector(
                 onTap: () {
@@ -305,7 +305,7 @@ class Summary extends StatelessWidget {
                   ),
                   child: Text(
                     "Continuar",
-                    style: TextStyle(color: Colors.white, fontSize: 16),
+                    style: TextStyle(color: Colors.white, fontSize: 28),
                   ),
                 ),
               ),

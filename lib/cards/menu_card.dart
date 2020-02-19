@@ -64,8 +64,8 @@ class MenuCard extends StatelessWidget {
                     crossAxisAlignment: CrossAxisAlignment.center,
                     mainAxisAlignment: MainAxisAlignment.center,
                     children: <Widget>[
-                      ClayText(text, emboss: false, size: 20),
-                      ClayText(desc, emboss: false, size: 12),
+                      Text(text, style: TextStyle(fontFamily: 'LuckiestGuy', fontSize: 32, color: Colors.white),),
+                      Text(desc, style: TextStyle(fontFamily: 'LuckiestGuy', fontSize: 16, color: Colors.white),),
                     ],
                   ),
                 ),
@@ -109,8 +109,8 @@ class MenuCard extends StatelessWidget {
                     crossAxisAlignment: CrossAxisAlignment.center,
                     mainAxisAlignment: MainAxisAlignment.center,
                     children: <Widget>[
-                      ClayText(text2, emboss: false, size: 20),
-                      ClayText(desc2, emboss: false, size: 12),
+                      Text(text2, style: TextStyle(fontFamily: 'LuckiestGuy', fontSize: 32, color: Colors.white),),
+                      Text(desc2, style: TextStyle(fontFamily: 'LuckiestGuy', fontSize: 16, color: Colors.white),),
                     ],
                   ),
                 ),

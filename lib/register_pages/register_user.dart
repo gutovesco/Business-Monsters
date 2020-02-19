@@ -31,8 +31,8 @@ class _SlimyCardPage2 extends State<SlimyCardPage2> {
                   slimeEnabled: true,
                   color: palleteMediumPink,
                   topCardHeight: 199,
-                  bottomCardHeight: 420,
-                  width: 400,
+                  bottomCardHeight: 620,
+                  width: 550,
                   topCardWidget: topCardWidget((snapshot.data)
                       ? 'Informações da Conta'
                       : 'Informações da Conta'),

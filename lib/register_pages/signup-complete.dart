@@ -40,13 +40,13 @@ class _SignupCompleteState extends State<SignupComplete> {
                             style: TextStyle(
                               fontFamily: 'LuckiestGuy',
                                 color: palleteMediumPink,
-                                fontSize: 32,
+                                fontSize: 46,
                                 fontWeight: FontWeight.bold),
                           ),
                           SizedBox(height: 25),
                           Container(
                             constraints: BoxConstraints.expand(
-                              height: 300.0,
+                              height: 450.0,
                             ),
                             decoration: BoxDecoration(
                                 image: new DecorationImage(
@@ -56,14 +56,14 @@ class _SignupCompleteState extends State<SignupComplete> {
                               fit: BoxFit.scaleDown,
                             )),
                           ),
-                          SizedBox(height: 15),
+
                           Center(
                             child: Text(
                                 'Temos um novo monstrinho empreendedor!',
                                 textAlign: TextAlign.center,
                                 style: TextStyle(
                                   fontFamily: 'LuckiestGuy',
-                                  fontSize: 20,
+                                  fontSize: 32,
                                   color: Colors.black,
                                 )),
                           ),
@@ -78,7 +78,7 @@ class _SignupCompleteState extends State<SignupComplete> {
                                   color: Colors.grey[500],
                                 )),
                           ),
-                          SizedBox(height: 10),
+                          SizedBox(height: 60),
                           GestureDetector(
                      onTap: () {
                         Navigator.push(

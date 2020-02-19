@@ -102,7 +102,7 @@ class _ContentPageState extends State<ContentPage> {
                           children: <Widget>[
                             Container(
                               margin: EdgeInsets.fromLTRB(0, 15, 0, 5),
-                              width: 390,
+                              width: 690,
                               child: Card(
                                 color: myColors.palletePink,
                                 shape: RoundedRectangleBorder(
@@ -115,7 +115,9 @@ class _ContentPageState extends State<ContentPage> {
                                       child: Text(
                                         phase[index],
                                         style: TextStyle(
-                                            fontSize: 24, color: Colors.white),
+                                            fontSize: 36,
+                                            color: Colors.white,
+                                            fontFamily: 'LuckiestGuy'),
                                       ),
                                     ),
                                     umContainer(lessonDesc[index],
@@ -127,7 +129,7 @@ class _ContentPageState extends State<ContentPage> {
                             ),
                             Container(
                                 margin: EdgeInsets.fromLTRB(0, 15, 0, 5),
-                                width: 390,
+                                width: 690,
                                 child: Card(
                                     color: myColors.block5,
                                     shape: RoundedRectangleBorder(
@@ -139,8 +141,9 @@ class _ContentPageState extends State<ContentPage> {
                                         child: Text(
                                           phase2[index],
                                           style: TextStyle(
-                                              fontSize: 24,
-                                              color: Colors.white),
+                                              fontSize: 36,
+                                              color: Colors.white,
+                                              fontFamily: 'LuckiestGuy'),
                                         ),
                                       ),
                                       umContainer(lessonDesc[index],
@@ -162,52 +165,58 @@ class _ContentPageState extends State<ContentPage> {
 
   Widget umContainer(String text, String xp, String title) {
     return GestureDetector(
-      onTap: () => Navigator.push(context,new MaterialPageRoute(builder: (BuildContext context) => Mission())),
+      onTap: () => Navigator.push(context,
+          new MaterialPageRoute(builder: (BuildContext context) => Mission())),
       child: Container(
-        margin: EdgeInsets.fromLTRB(0, 0, 0, 8),
-        child: Center(
-            child: Column(
-          children: <Widget>[
-            ClipRRect(
-              borderRadius: BorderRadius.circular(50),
-              child: SizedBox(
-                width: 100,
-                height: 100,
-                child: Container(
-                  decoration: BoxDecoration(color: myColors.palleteMediumPink),
-                  child: Center(
-                    child: Text(
-                      text,
-                      style: TextStyle(
-                        foreground: Paint()
-                          ..style = PaintingStyle.stroke
-                          ..strokeWidth = 3
-                          ..color = Colors.white,
-                        fontSize: 30,
+          margin: EdgeInsets.fromLTRB(0, 0, 0, 8),
+          child: Center(
+              child: Column(
+            children: <Widget>[
+              ClipRRect(
+                borderRadius: BorderRadius.circular(75),
+                child: SizedBox(
+                  width: 150,
+                  height: 150,
+                  child: Container(
+                    decoration:
+                        BoxDecoration(color: myColors.palleteMediumPink),
+                    child: Center(
+                      child: Text(
+                        text,
+                        style: TextStyle(
+                          foreground: Paint()
+                            ..style = PaintingStyle.stroke
+                            ..strokeWidth = 3
+                            ..color = Colors.white,
+                          fontSize: 36,
+                        ),
                       ),
                     ),
                   ),
                 ),
               ),
-            ),
-            Container(
-              margin: EdgeInsets.all(4),
-              width: 100,
-              child: Center(
-                child: Text(
-                  title,
-                  textAlign: TextAlign.center,
-                  style: TextStyle(color: Colors.white, fontSize: 14),
+              Container(
+                margin: EdgeInsets.all(4),
+                width: 100,
+                child: Center(
+                  child: Text(
+                    title,
+                    textAlign: TextAlign.center,
+                    style: TextStyle(
+                        color: Colors.white,
+                        fontSize: 16,
+                        fontFamily: 'Squada One'),
+                  ),
                 ),
               ),
-            ),
-            Text(
-              xp,
-              textAlign: TextAlign.center,
-              style: TextStyle(color: Colors.limeAccent),
-            )
-          ],
-        ))),
+              Text(
+                xp,
+                textAlign: TextAlign.center,
+                style: TextStyle(
+                    color: Colors.limeAccent, fontFamily: 'Squada One'),
+              )
+            ],
+          ))),
     );
   }
 

@@ -27,8 +27,8 @@ class _ProfilePageState extends State<ProfilePage> {
                   mainAxisAlignment: MainAxisAlignment.center,
                   children: <Widget>[
                     Image(
-                      height: 150,
-                      width: 150,
+                      height: 220,
+                      width: 220,
                       image: AssetImage('assets/profile_pic.png'),
                     ),
                     Column(
@@ -37,7 +37,7 @@ class _ProfilePageState extends State<ProfilePage> {
                           style: TextStyle(
                             fontFamily: 'LuckiestGuy',
                               fontWeight: FontWeight.w700,
-                              fontSize: 16,
+                              fontSize: 28,
                               color: Colors.orange),
                         ),
                         SizedBox(height: 10.0),
@@ -45,13 +45,13 @@ class _ProfilePageState extends State<ProfilePage> {
                           style: TextStyle(
                             fontFamily: 'LuckiestGuy',
                               fontWeight: FontWeight.w700,
-                              fontSize: 16,
+                              fontSize: 28,
                               color: Colors.pink),
                         ),
                         SizedBox(height: 10.0),
                         Image(
-                          height: 50,
-                          width: 50,
+                          height: 90,
+                          width: 90,
                           image: AssetImage('assets/next_profile.png'),
                         ),
                       ],
@@ -60,13 +60,13 @@ class _ProfilePageState extends State<ProfilePage> {
                 ),
                 Row(
                   children: <Widget>[
-                    SizedBox(width: 0.0, height: 60.0),
+                    SizedBox(width: 0.0, height: 80.0),
                     Text(
                       "Olá, Joana Souza.",
                       style: TextStyle(
                         fontFamily: 'LuckiestGuy',
                           fontWeight: FontWeight.w700,
-                          fontSize: 26,
+                          fontSize: 38,
                           color: Colors.pink),
                     ),
                   ],
