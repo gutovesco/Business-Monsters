@@ -21,7 +21,7 @@ que são convertidos em prêmios, através do resgate de benefícios de empresas
 Dessa forma, procuramos ajudar novos empreendedores a continuarem aprendendo com nosso material cuidadosamente
 selecionado ao mesmo passo em que fazemos o seu negócio ganhar asas através dos benefícios propostos.
 
-- [Página na Product Hunt]() 
+- [Página na Product Hunt](https://www.producthunt.com/posts/business-monsters) 
 
 ## Telas
 
