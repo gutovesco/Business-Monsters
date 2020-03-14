@@ -2,10 +2,10 @@ import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:Business_Monsters/pages/quiz0.dart';
 
-Color palleteBlue = Color(0xff010a43);
-Color palleteLightPink = Color(0xffffc2c2);
-Color palleteMediumPink = Color(0xffff9d9d);
-Color palletePink = Color(0xffff2e63);
+Color palleteLightGrey = Color(0xffc4d1fa);
+Color palleteLightBlue = Color(0xff829ef6);
+Color palleteMediumBlue = Color(0xff3b66f1);
+Color palleteBlue = Color(0xff1144e8);
 
 class SignupComplete extends StatefulWidget {
   SignupComplete({Key key}) : super(key: key);
@@ -39,7 +39,7 @@ class _SignupCompleteState extends State<SignupComplete> {
                             textAlign: TextAlign.left,
                             style: TextStyle(
                               fontFamily: 'LuckiestGuy',
-                                color: palleteMediumPink,
+                                color: palleteMediumBlue,
                                 fontSize: 32,
                                 fontWeight: FontWeight.bold),
                           ),
@@ -51,7 +51,7 @@ class _SignupCompleteState extends State<SignupComplete> {
                             decoration: BoxDecoration(
                                 image: new DecorationImage(
                               image: new ExactAssetImage(
-                                'assets/profile_pic.png',
+                                'assets/businessman2.jpg',
                               ),
                               fit: BoxFit.scaleDown,
                             )),
@@ -95,7 +95,7 @@ class _SignupCompleteState extends State<SignupComplete> {
                             color: Color(0xFFF1F3F6),
                             borderRadius: BorderRadius.all(Radius.circular(10)),
                              gradient: LinearGradient(
-            colors: [palletePink, palleteMediumPink]),),
+            colors: [palleteBlue, palleteMediumBlue]),),
                         child: Text(
                           "Vamos Lá!",
                           style: TextStyle(

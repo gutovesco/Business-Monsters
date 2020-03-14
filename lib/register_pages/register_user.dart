@@ -3,10 +3,10 @@ import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:slimy_card/slimy_card.dart';
 import 'package:Business_Monsters/register_pages/signup-complete.dart';
 
-Color palleteBlue = Color(0xff010a43);
-Color palleteLightPink = Color(0xffffc2c2);
-Color palleteMediumPink = Color(0xffff9d9d);
-Color palletePink = Color(0xffff2e63);
+Color palleteLightGrey = Color(0xffc4d1fa);
+Color palleteLightBlue = Color(0xff829ef6);
+Color palleteMediumBlue = Color(0xff3b66f1);
+Color palleteBlue = Color(0xff1144e8);
 
 class SlimyCardPage2 extends StatefulWidget {
   @override
@@ -29,7 +29,7 @@ class _SlimyCardPage2 extends State<SlimyCardPage2> {
               return ListView(padding: EdgeInsets.zero, children: <Widget>[
                 SlimyCard(
                   slimeEnabled: true,
-                  color: palleteMediumPink,
+                  color: palleteMediumBlue,
                   topCardHeight: 199,
                   bottomCardHeight: 420,
                   width: 400,
@@ -61,11 +61,11 @@ class _SlimyCardPage2 extends State<SlimyCardPage2> {
   // This widget will be passed as Bottom Card's Widget.
   Widget bottomCardWidget() {
     return Scaffold(
-      backgroundColor: palleteMediumPink,
+      backgroundColor: palleteMediumBlue,
       body: SafeArea(
           child: SingleChildScrollView(
             child: Container(
-              color: palleteMediumPink,
+              color: palleteMediumBlue,
                 child: Column(
                   crossAxisAlignment: CrossAxisAlignment.start,
                   children: <Widget>[
@@ -135,10 +135,10 @@ class _SlimyCardPage2 extends State<SlimyCardPage2> {
                 ),
                 SizedBox(height: 10),
         DropdownButton<String>(
-          focusColor: palleteMediumPink,
+          focusColor: palleteMediumBlue,
         iconSize: 24,
         elevation: 6,
-        style: TextStyle(color: palleteLightPink, fontFamily: 'LuckiestGuy',),
+        style: TextStyle(color: palleteLightBlue, fontFamily: 'LuckiestGuy',),
         value: selectedSubject,
         onChanged: (value) {
           setState(() {
@@ -183,7 +183,7 @@ class _SlimyCardPage2 extends State<SlimyCardPage2> {
                           "Submeter",
                           style: TextStyle(
                             fontFamily: 'LuckiestGuy',
-                              color: palleteMediumPink,
+                              color: palleteMediumBlue,
                               fontSize: 16),
                         ),
                       ),

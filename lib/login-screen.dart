@@ -4,10 +4,10 @@ import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:Business_Monsters/register_pages/register_user.dart';
 import 'package:Business_Monsters/home.dart';
 
-Color palleteBlue = Color(0xff010a43);
-Color palleteLightPink = Color(0xffffc2c2);
-Color palleteMediumPink = Color(0xffff9d9d);
-Color palletePink = Color(0xffff2e63);
+Color palleteLightGrey = Color(0xffc4d1fa);
+Color palleteLightBlue = Color(0xff829ef6);
+Color palleteMediumBlue = Color(0xff3b66f1);
+Color palleteBlue = Color(0xff1144e8);
 
 class LoginScreen extends StatefulWidget {
   LoginScreen({Key key}) : super(key: key);
@@ -38,11 +38,11 @@ class _LoginScreenState extends State<LoginScreen> {
                     ),
                     Center(
                       child: Text(
-                        "Business Monsters",
+                        "Start UP",
                         textAlign: TextAlign.center,
                         style: TextStyle(
                           fontFamily: 'LuckiestGuy',
-                            color: palleteMediumPink,
+                            color: palleteMediumBlue,
                             fontSize: 36,
                             fontWeight: FontWeight.bold,
                             shadows: [
@@ -76,17 +76,17 @@ class _LoginScreenState extends State<LoginScreen> {
                       children: <Widget>[
                         TextField(
                           style:
-                              TextStyle(color: palleteMediumPink),
+                              TextStyle(color: palleteMediumBlue),
                           decoration: InputDecoration(
                               focusedBorder: UnderlineInputBorder(
                                 borderSide: BorderSide(
-                                    color: palleteMediumPink,
+                                    color: palleteMediumBlue,
                                     width: 2),
                               ),
                               labelText: "Usuário",
                               labelStyle: TextStyle(
                                 fontFamily: 'LuckiestGuy',
-                                  color: palleteMediumPink,
+                                  color: palleteMediumBlue,
                                   fontSize: 14)),
                         ),
                       ],
@@ -95,17 +95,17 @@ class _LoginScreenState extends State<LoginScreen> {
                       height: ScreenUtil().setHeight(100),
                     ),
                     TextField(
-                      style: TextStyle(color: palleteMediumPink),
+                      style: TextStyle(color: palleteMediumBlue),
                       decoration: InputDecoration(
                           focusedBorder: UnderlineInputBorder(
                             borderSide: BorderSide(
-                                color: palleteMediumPink,
+                                color: palleteMediumBlue,
                                 width: 2),
                           ),
                           labelText: "Senha",
                           labelStyle: TextStyle(
                             fontFamily: 'LuckiestGuy',
-                              color: palleteMediumPink,
+                              color: palleteMediumBlue,
                               fontSize: 14)),
                     ),
                     SizedBox(
@@ -117,7 +117,7 @@ class _LoginScreenState extends State<LoginScreen> {
                           decoration: BoxDecoration(
                               ),
                           child: CustomSwitch(
-                            activeColor: palleteMediumPink,
+                            activeColor: palleteMediumBlue,
                             value: status,
                             onChanged: (value) {
                               setState(() {
@@ -132,7 +132,7 @@ class _LoginScreenState extends State<LoginScreen> {
                         Text(
                           "Lembrar dados",
                           style:
-                              TextStyle(color: palleteLightPink, fontSize: 14, fontFamily: 'LuckiestGuy',),
+                              TextStyle(color: palleteLightBlue, fontSize: 14, fontFamily: 'LuckiestGuy',),
                         ),
                         Spacer(),
                       ],
@@ -169,7 +169,7 @@ class _LoginScreenState extends State<LoginScreen> {
                           "Login",
                           style: TextStyle(
                             fontFamily: 'LuckiestGuy',
-                              color: palleteMediumPink,
+                              color: palleteMediumBlue,
                               fontSize: 16),
                         ),
                       ),
@@ -204,7 +204,7 @@ class _LoginScreenState extends State<LoginScreen> {
                           "Registrar",
                           style: TextStyle(
                             fontFamily: 'LuckiestGuy',
-                              color: palleteMediumPink,
+                              color: palleteMediumBlue,
                               fontSize: 16),
                         ),
                       ),
